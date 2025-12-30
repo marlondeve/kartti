@@ -1,0 +1,93 @@
+{
+    "Parrilla & Fusión": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Hamburguesa",
+                "price": "$31,000",
+                "description": "Pan brioche, carne angus de 180g, doble queso cheddar, tocineta crocante y salsa secreta.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b48c4a27d_1756738700.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Costillas BBQ",
+                "price": "$45,000",
+                "description": "Costillas de cerdo caramelizadas en salsa BBQ casera, acompañadas de papas rústicas.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b4e4b92f0_1756738788.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Pizza Fusión",
+                "price": "$29,000",
+                "description": "Base artesanal, mozzarella fresca, aceitunas negras, jamón serrano y rúgula.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b551e26d2_1756738897.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo Thai al Wok",
+                "price": "$34,000",
+                "description": "Tiras de pollo salteadas con vegetales frescos y salsa de coco-curry.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b77771ce5_1756739447.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Ensalada Power Bowl",
+                "price": "$28,000",
+                "description": "Mix de quinoa, aguacate, pollo grillado, garbanzos y aderezo de yogur.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b5d8140a2_1756739032.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Brownie Volcán",
+                "price": "$18,000",
+                "description": "Brownie de chocolate con centro líquido, acompañado de bola de helado de vainilla.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b60addb29_1756739082.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tacos de Carnitas",
+                "price": "$26,000",
+                "description": "Tortillas de maíz rellenas de carnitas de cerdo, cebolla morada encurtida y guacamole fresco.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b63d1c166_1756739133.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Paella de Mariscos",
+                "price": "$55,000",
+                "description": "Arroz estilo español con calamares, mejillones, camarones y azafrán.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b65983791_1756739161.jpg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Bebidas & Cócteles": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Limonada de Coco",
+                "price": "$12,000",
+                "description": "Refrescante mezcla de limón natural con crema de coco, servida bien fría.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b719d7e9f_1756739353.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Jugo Natural de Maracuyá",
+                "price": "$10,000",
+                "description": "Pulpa fresca de maracuyá con agua o leche, sin conservantes.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b75713180_1756739415.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Comida rapida": {
+        "status": "inactivo",
+        "products": []
+    }
+}

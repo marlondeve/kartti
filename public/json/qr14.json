@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 121,
+            "nombre": "EstosBurgers",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/EstosBurgers_6939abec714e1.png",
+            "created_at": "2025-12-10 17:20:44",
+            "restaurante_nombre": "Estos Burgers"
+        }
+    ]
+}

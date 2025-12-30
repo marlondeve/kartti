@@ -1,0 +1,465 @@
+{
+    "Hamburguesas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "LA BABY",
+                "price": "$15,900",
+                "description": "\r\nUn clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, tocineta,  y un toque fresco de lechuga, tomate y cebolla cruda.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691520d9bc99a_1762992345.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "LA BABY DOBLE",
+                "price": "$19,990",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915218a3a314_1762992522.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "LA BABY TRIPLE",
+                "price": "$28,900",
+                "description": "Pan artesanal, tres jugosas carnes de autor (375 g), dos sedoso derretido de queso mozzarella, y la frescura de lechuga. tomate y cebolla cruda. ",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915221d1f973_1762992669.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "1\/2 LIBRA BACON BURGER",
+                "price": "$27,000",
+                "description": "¡Doble carne, doble placer! Pan artesanal, dos suculentas carnes de autor (250 g), un generoso derretido de queso mozzarella, el toque perfecto de nuestro chutney casero mixto, nuestro tocino ahumado, y frescura en cada bocado con lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151df5ec44b_1762991605.png",
+                "status": "activo"
+            },
+            {
+                "name": "1\/4 DE LIBRA",
+                "price": "$19,200",
+                "description": "Mediana en tamaño, inmensa en sabor. Pan artesanal, una jugosa carne de autor 125gr. derretido queso mozzarella, nuestro característico chutney casero mixto, crujiente tocino ahumado, y un mix fresco de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e4acde78_1762991690.png",
+                "status": "activo"
+            },
+            {
+                "name": "Básica",
+                "price": "$16,000",
+                "description": "Un clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, un explosivo chutney casero mixto (morrón y cebolla), y un toque fresco de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e762f990_1762991734.png",
+                "status": "activo"
+            },
+            {
+                "name": "GAUCHA",
+                "price": "$27,000",
+                "description": "Carne artesanal, chorizo premium, chimichurri, queso asado envuelto en maple, tajadas maduritas, queso mozzarella, vegetales frescos (lechuga, tomate, cebolla blanca en plumas) y pan brioche.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151eabf3e77_1762991787.png",
+                "status": "activo"
+            },
+            {
+                "name": "DOBLE CARNE",
+                "price": "$22,500",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g). un sedoso derretido de queso mozzarella, nuestro icónico chutney casero mixto, y la frescura de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691520b896a74_1762992312.png",
+                "status": "activo"
+            },
+            {
+                "name": "PERUANA",
+                "price": "$21,900",
+                "description": "Un tributo a los sabores andinos con un toque gourmet. Una jugosa carne de autor (125 g), crujiente tocino ahumado, fascinantes cebollas en pluma al estilo del chef, el irresistible. crunch del maiz tostado, y un cremoso queso fundido, el toque fresco de la lechuga y tomate, todo abrazado por un suave pan artesanal.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915299f67c08_1762994591.png",
+                "status": "activo"
+            },
+            {
+                "name": "SEPTIEMBRE",
+                "price": "$22,500",
+                "description": "\r\n\r\nUna creación de temporada que redefine la perfección y llegó para quedarse. Pan artesanal, nuestra exclusiva carne de autor 125gr, un cremoso queso mozzarella, el dulzor sublime de un meloso de pera, el contraste salado del queso costeño, nuestro tocino ahumado, y un toque fresco de lechuga y tomate. ¡Sabores que conquistan!",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915365bea5fc_1762997851.png",
+                "status": "activo"
+            }
+        ]
+    },
+    "Adiciones": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "PAPA FRANCESA",
+                "price": "$4,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691522ce445fd_1762992846.webp",
+                "status": "activo"
+            },
+            {
+                "name": "QUESO MOZZARELLA",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691522ec83239_1762992876.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "CHUTNEY CEBOLLA",
+                "price": "$2,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152375ca9ca_1762993013.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "CHUTNEY MORRON",
+                "price": "$2,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691523823b613_1762993026.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "RANCHERA PICADA",
+                "price": "$7,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "CHIMICHURRI",
+                "price": "$2,500",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691523a11136d_1762993057.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "TAJADA MADURA",
+                "price": "$3,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691523b19f230_1762993073.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "CARNE DE HAMBURGUESA",
+                "price": "$8,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915242c7fe3c_1762993196.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "QUESO COSTEÑO",
+                "price": "$3,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152446aac51_1762993222.jpg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Combos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "COMBO 1",
+                "price": "$39,900",
+                "description": "Burger 1\/2 libra bacon + milk shake (tú eliges el sabor).",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "COMBO 2",
+                "price": "$33,900",
+                "description": "Burger 1\/4 libra bacon + milk shake (tú eliges el sabor).",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "Milk Shake's": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "MARACUYÁ",
+                "price": "$12,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915252d3e08f_1762993453.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "MILO",
+                "price": "$12,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915253c097ef_1762993468.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "FRUTOS ROJOS",
+                "price": "$12,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915254762b79_1762993479.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "ZAPOTE",
+                "price": "$12,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "CAFÉ",
+                "price": "$12,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f581abdffa_1763661850.jpeg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Asados": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "RES",
+                "price": "$27,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "CERDO",
+                "price": "$27,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691525b0d24b6_1762993584.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "PECHUGA",
+                "price": "$27,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "Salchipapas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "LA ESPELUCÁ",
+                "price": "$27,000",
+                "description": "Carne desmechada, papitas fritas, pico e' gallo, guacamole, salchicha ranchera, queso gratinado, salsas.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6939ae564f0a5_1765387862.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "SALCHI MIX",
+                "price": "$27,000",
+                "description": "Mezcla de carnes, papitas fritas, tocino ahumado en trocitos, queso gratinado, salsas.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152609e667e_1762993673.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "SALCHI MIX 2P",
+                "price": "$45,000",
+                "description": "Mezcla de carnes, papitas fritas, tocino ahumado en trocitos, queso gratinado, salsas.",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "Bebidas Generales": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "AGUA SABORIZADA",
+                "price": "$4,500",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f58233460d_1763661859.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "AGUA BRISA 600ML",
+                "price": "$3,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152690b2a10_1762993808.png",
+                "status": "activo"
+            },
+            {
+                "name": "GINGER",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f582948828_1763661865.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "Soda",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f589aab732_1763661978.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "SPRITE",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f583298e47_1763661874.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "QUATRO PET 400",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915270801ad5_1762993928.png",
+                "status": "activo"
+            },
+            {
+                "name": "QUATRO 1.5",
+                "price": "$10,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152769edcb6_1762994025.png",
+                "status": "activo"
+            },
+            {
+                "name": "KOLA ROMAN PET 500",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915278077443_1762994048.png",
+                "status": "activo"
+            },
+            {
+                "name": "KOLA ROMAN 1.5",
+                "price": "$10,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915278f1ee5e_1762994063.png",
+                "status": "activo"
+            },
+            {
+                "name": "COCA COLA 400ML",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691527a60fdc4_1762994086.png",
+                "status": "activo"
+            },
+            {
+                "name": "COCA COLA ZERO",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f583add18e_1763661882.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "COCA COLA 1.5",
+                "price": "$10,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691527c2c6814_1762994114.png",
+                "status": "activo"
+            }
+        ]
+    },
+    "Cervezas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "CORONITA",
+                "price": "$6,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5adb731e4_1763662555.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "STELLA",
+                "price": "$8,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5ae07f811_1763662560.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "CLUB COLOMBIA",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5b0783852_1763662599.png",
+                "status": "activo"
+            },
+            {
+                "name": "AGUILA ORIGINAL",
+                "price": "$5,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5b25e725d_1763662629.png",
+                "status": "activo"
+            }
+        ]
+    },
+    "Sodas Micheladas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "MARACUMANGO CORONITA",
+                "price": "$16,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152882cdd78_1762994306.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "SANDÍA & LYCHEE",
+                "price": "$14,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691528d1eeecf_1762994385.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "JENGIBRE ROMERO",
+                "price": "$12,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691528e086b21_1762994400.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "APEROL SPRITZ",
+                "price": "$25,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "BLANCO DE VERANO",
+                "price": "$15,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "GASSATA FRUTOS ROJOS",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "MARACUMANGO",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "Jugos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Nispero",
+                "price": "$10,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Limonada de coco",
+                "price": "$10,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Frutos Rojos Jugo",
+                "price": "$10,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Corozo",
+                "price": "$10,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    }
+}

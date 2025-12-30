@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 104,
+            "nombre": "Mesa 1",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Mesa1_684c308dbbbaf.png",
+            "created_at": "2025-06-13 14:07:09",
+            "restaurante_nombre": "La Morena"
+        }
+    ]
+}

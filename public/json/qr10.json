@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 94,
+            "nombre": "Mesa 3",
+            "tipo": "mesa",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Mesa3_6817a9a50a37b.png",
+            "created_at": "2025-05-04 17:53:41",
+            "restaurante_nombre": "Roble"
+        }
+    ]
+}

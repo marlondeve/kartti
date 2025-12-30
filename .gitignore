@@ -1,0 +1,45 @@
+# Archivos de configuración
+config/config.php
+
+# Archivos de logs
+logs/*
+!logs/.gitkeep
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+
+# Archivos de caché
+cache/*
+!cache/.gitkeep
+
+# Archivos de sesión
+sessions/*
+!sessions/.gitkeep
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencias
+vendor/
+node_modules/
+
+# Archivos de compilación
+*.compiled.js
+*.compiled.css
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Mantener los archivos de prueba
+!tests/ 

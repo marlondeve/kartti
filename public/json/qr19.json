@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 123,
+            "nombre": "Montelíbano",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Montelbano_693b7749e2eb0.png",
+            "created_at": "2025-12-12 02:00:41",
+            "restaurante_nombre": "La Carreta"
+        }
+    ]
+}

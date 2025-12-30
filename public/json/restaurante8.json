@@ -1,0 +1,56 @@
+{
+    "Chucha": [
+        {
+            "name": "Chucha22",
+            "price": "$555,555",
+            "description": "pequeña32",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb250320f92_1744512259.png",
+            "status": ""
+        },
+        {
+            "name": "Chucha 2",
+            "price": "$232,323",
+            "description": "asdad",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb24b242e2a_1744512178.png",
+            "status": ""
+        },
+        {
+            "name": "La Morena",
+            "price": "$232,323",
+            "description": "asdadad",
+            "image": "http:\/\/localhost\/\\/uploads\/productos\/67fb24bc42cdd_1744512188.jpg",
+            "status": ""
+        },
+        {
+            "name": "Nalgata",
+            "price": "$232,323",
+            "description": "asdasdad",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb24c6252bc_1744512198.png",
+            "status": ""
+        },
+        {
+            "name": "Nalgata",
+            "price": "$232,323",
+            "description": "asdada",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb24cff0672_1744512207.jpg",
+            "status": ""
+        },
+        {
+            "name": "Nalgita",
+            "price": "$232,323",
+            "description": "232323",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb255899697_1744512344.jpg",
+            "status": ""
+        },
+        {
+            "name": "Asad",
+            "price": "$232,323",
+            "description": "asdada",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fb256a6e41b_1744512362.jpg",
+            "status": ""
+        }
+    ],
+    "Nalgita": [],
+    "Asdadad": [],
+    "Asdasdad": []
+}

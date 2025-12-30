@@ -1,0 +1,26 @@
+{
+    "Asados": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Cerdo BBQ",
+                "price": "$25,000",
+                "description": "Cerdo en salsa BBQ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6818fd3fa41e9_1746468159.jpeg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Postres": {
+        "status": "inactivo",
+        "products": [
+            {
+                "name": "Helado",
+                "price": "$10,000",
+                "description": "dssadasdsd",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    }
+}

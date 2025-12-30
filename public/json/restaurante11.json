@@ -1,0 +1,52 @@
+{
+    "ENTRADAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Deditos",
+                "price": "$6,000",
+                "description": "4 deditos rellenos de queso",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68ba180b4676a_1757026315.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patacones",
+                "price": "$5,000",
+                "description": "4 Patacones acompañado de salsa de ajo.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68ba17d4da383_1757026260.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "PERROS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Perro Suizo",
+                "price": "$22,000",
+                "description": "Pan, Salchicha Suiza, Cebolla, Queso, Papas ripio, papa francesa, salsas",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68ba18a9427b0_1757026473.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "Perro sencillo",
+                "price": "$12,000",
+                "description": "Salchicha americana, papa chip, cebolla, queso y salsas",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68ba19361f2d6_1757026614.jpg",
+                "status": "activo"
+            }
+        ]
+    },
+    "Gj": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Dhh",
+                "price": "$8,000",
+                "description": "Wryj",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    }
+}

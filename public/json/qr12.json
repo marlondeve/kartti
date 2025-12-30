@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 114,
+            "nombre": "Carta",
+            "tipo": "mesa",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Carta_68bcbe3813fad.png",
+            "created_at": "2025-09-06 23:05:28",
+            "restaurante_nombre": "Sazón de Barrio"
+        }
+    ]
+}

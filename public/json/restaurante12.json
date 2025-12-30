@@ -1,0 +1,247 @@
+{
+    "Suizos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Picaro",
+                "price": "$20,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "SALCHIPAPAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "La Vecina",
+                "price": "$13,000",
+                "description": "Papas a la francesa, salchicha tipo long, tocineta, queso costeño, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "La Bandida",
+                "price": "$18,000",
+                "description": "Papas a la francesa, salchicha tipo long, carne de res, butifarra, tocineta, queso costeño, queso mozzarella, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "La Cotizada",
+                "price": "$22,000",
+                "description": "Papas a la francesa, salchicha tipo long, carne de res, carne de cerdo, chorizo artesanal, tocineta, queso costeño asado, queso mozzarella, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "PICADAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Tola y Maruja (2 personas)",
+                "price": "$30,000",
+                "description": "Papas a la francesa, patacones, carne de res, carne de cerdo, tocineta, butifarra, queso costeño, cebolla, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "La Vista (3 personas)",
+                "price": "$40,000",
+                "description": "Papas a la francesa, patacones, carne de res, carne de cerdo, tocineta, chorizo artesanal, queso costeño, cebolla, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "La Recocha (4 – 5 personas)",
+                "price": "$50,000",
+                "description": "Papas a la francesa, patacones, carne de cerdo, tocineta, butifarra, chorizo artesanal, queso costeño, cebolla, papa ripio y salsas.",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "PA’ TOMAR – Las Miches": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Manzana verde",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Mango biche",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Lychee",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Fresa",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Maracuyá",
+                "price": "$14,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Cerveza",
+                "price": "$8,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Soda",
+                "price": "$8,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "PA’ LA CALOR": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Águila Negra",
+                "price": "$4,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Coronita",
+                "price": "$4,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Costeñita",
+                "price": "$3,500",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "PA’ BAJA’ EL TORUGO": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Coca Cola",
+                "price": "$4,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Cuatro",
+                "price": "$3,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Manzana",
+                "price": "$3,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Uva",
+                "price": "$3,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Naranjada",
+                "price": "$3,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Jugo Hit",
+                "price": "$3,500",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Soda",
+                "price": "$3,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Agua",
+                "price": "$1,500",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Coca Cola 1.5L",
+                "price": "$8,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "PA’ BAJA’ EL TORUGO 2.0 (Jugos Naturales)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Jugo de maracuyá",
+                "price": "$8,000",
+                "description": "👉 En agua – $7.000\r\n👉 En leche – $8.000",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Jugo de corozo",
+                "price": "$8,000",
+                "description": "👉 En agua – $7.000\r\n👉 En leche – $8.000",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Jugo de fresa",
+                "price": "$8,000",
+                "description": "👉 En agua – $7.000\r\n👉 En leche – $8.000",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Jugo de banano",
+                "price": "$8,000",
+                "description": "👉 En agua – $7.000\r\n👉 En leche – $8.000",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 116,
+            "nombre": "Caucasia",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Caucasia_692887cd996ba.png",
+            "created_at": "2025-11-27 17:18:05",
+            "restaurante_nombre": "Estos Centenario"
+        }
+    ]
+}

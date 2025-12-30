@@ -1,0 +1,13 @@
+{
+    "qrs": [
+        {
+            "id": 112,
+            "nombre": "Mesa 2",
+            "tipo": "mesa",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/Mesa2_68bc5b29b0c25.png",
+            "created_at": "2025-09-06 16:02:49",
+            "restaurante_nombre": "Restaurante_Prueba_1"
+        }
+    ]
+}

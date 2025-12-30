@@ -1,0 +1,62 @@
+{
+    "Principales": [
+        {
+            "name": "Pizza",
+            "price": "$25,000",
+            "description": "pizza doble queso pepperoni",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfbddf0da7_1744567261.jpeg",
+            "status": "activo"
+        },
+        {
+            "name": "Suizo",
+            "price": "$30,000",
+            "description": "Suiza, papas, queso ",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfcecb4e8e_1744567532.jpeg",
+            "status": "activo"
+        },
+        {
+            "name": "Pizza",
+            "price": "$15,000",
+            "description": "Pizza asdasda",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfd038ce53_1744567555.jpeg",
+            "status": ""
+        },
+        {
+            "name": "Suizo",
+            "price": "$11,000",
+            "description": "Pizza asdasda",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfd18973c7_1744567576.jpeg",
+            "status": ""
+        },
+        {
+            "name": "Dddd",
+            "price": "$28,000",
+            "description": "Pizza asdasda",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfd2dc0c8f_1744567597.jpeg",
+            "status": ""
+        },
+        {
+            "name": "Suizo",
+            "price": "$80,000",
+            "description": "Pizza asdasda",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfd3ebc5bc_1744567614.jpeg",
+            "status": ""
+        },
+        {
+            "name": "Ladrillo",
+            "price": "$50,000",
+            "description": "Pizza asdasda",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfd503006c_1744567632.jpeg",
+            "status": ""
+        }
+    ],
+    "Postres": [
+        {
+            "name": "Tarta de queso",
+            "price": "$20,000",
+            "description": "tarta de queso con helado",
+            "image": "http:\/\/localhost\/\/uploads\/productos\/67fbfc8502b55_1744567429.jpeg",
+            "status": "activo"
+        }
+    ]
+}
