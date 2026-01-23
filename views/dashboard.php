@@ -1,8 +1,7 @@
 <?php
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /login');
-    exit;
+    redirect_to('index.php?route=login');
 }
 
 // Obtener datos del usuario de la sesión
@@ -18,6 +17,10 @@ $user_email = $_SESSION['user_email'];
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
     <!-- Overlay para el fondo oscuro cuando se muestra el modal -->
@@ -86,31 +89,37 @@ $user_email = $_SESSION['user_email'];
                 
                 <ul class="space-y-2 font-medium mt-5">
                     <li>
-                        <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=dashboard'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
                             <i class="fas fa-home w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Área de Trabajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/menu" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=menu'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-utensils w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Menú</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/qr" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=qr'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-qrcode w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Códigos QR</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/alertas" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=alertas'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-chart-bar w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Alertas</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=analitica'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-chart-line w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
+                            <span class="ml-3">Analítica</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_path('index.php?route=configuracion'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-cog w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Configuración</span>
                         </a>
@@ -196,7 +205,7 @@ $user_email = $_SESSION['user_email'];
                 <div class="p-4 bg-white rounded-lg shadow dark:bg-gray-800">
                     <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Acciones Rápidas</h2>
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        <a href="/menu" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <a href="<?php echo base_path('index.php?route=menu'); ?>" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                             <div class="flex items-center">
                                 <div class="p-3 rounded-full bg-blue-100 dark:bg-blue-900">
                                     <i class="fas fa-utensils text-2xl text-blue-600 dark:text-blue-300"></i>
@@ -220,7 +229,7 @@ $user_email = $_SESSION['user_email'];
                             </div>
                         </a>
 
-                        <a href="#" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <a id="configuracionCardLink" href="<?php echo base_path('index.php?route=configuracion'); ?>" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                             <div class="flex items-center">
                                 <div class="p-3 rounded-full bg-gray-100 dark:bg-gray-900">
                                     <i class="fas fa-cog text-2xl text-gray-600 dark:text-gray-300"></i>
@@ -239,7 +248,7 @@ $user_email = $_SESSION['user_email'];
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="/public/js/utils.js"></script>
-    <script src="/public/js/dashboard.js"></script>
+    <script src="<?php echo base_path('public/js/utils.js'); ?>"></script>
+    <script src="<?php echo base_path('public/js/dashboard.js'); ?>"></script> 
 </body>
 </html> 

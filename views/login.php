@@ -27,7 +27,11 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_path('public/css/styles.css'); ?>">
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -44,12 +48,12 @@
                 <h2 class="text-center text-3xl font-bold text-white">Iniciar Sesión</h2>
                 <p class="mt-2 text-center text-sm text-gray-400">
                     ¿No tienes una cuenta?
-                    <a href="/registro" class="font-medium text-blue-500 hover:text-blue-400">
+                    <a href="<?php echo base_path('index.php?route=registro'); ?>" class="font-medium text-blue-500 hover:text-blue-400">
                         Regístrate aquí
                     </a>
                 </p>
             </div>
-            <form class="mt-8 space-y-6" id="loginForm" action="/api/api_auth.php" method="POST">
+            <form class="mt-8 space-y-6" id="loginForm" action="<?php echo base_path('api/api_auth.php'); ?>" method="POST">
                 <div class="space-y-4">
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-300">Correo electrónico</label>
@@ -75,7 +79,7 @@
                     </div>
 
                     <div class="text-sm">
-                        <a href="/recuperar-password" class="font-medium text-blue-500 hover:text-blue-400">
+                        <a href="<?php echo base_path('index.php?route=recuperar-password'); ?>" class="font-medium text-blue-500 hover:text-blue-400">
                             ¿Olvidaste tu contraseña?
                         </a>
                     </div>
@@ -125,6 +129,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="<?php echo base_path('public/js/script.js'); ?>"></script>
 </body>
 </html> 

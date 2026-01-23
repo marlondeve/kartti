@@ -78,7 +78,7 @@ async function loadAlertasPendientes() {
     showRefreshIndicator();
     
     try {
-        const response = await fetch('/api/api_alertas.php?estado=pendiente', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php?estado=pendiente', {
             method: 'GET',
         });
         const data = await response.json();
@@ -106,7 +106,7 @@ async function loadAlertasPendientes() {
 async function loadAlertasResueltas() {
     renderCargando('alertasResueltasContainer');
     try {
-        const response = await fetch('/api/api_alertas.php?estado=resuelta', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php?estado=resuelta', {
             method: 'GET',
         });
         const data = await response.json();
@@ -120,8 +120,7 @@ async function loadAlertasResueltas() {
     }
 }
 document.getElementById('confirmLogout').addEventListener('click', function() {
-    window.location.href = "/logout";
-});
+    window.location.href = (window.BASE_PATH || '') + '/index.php?route=logout';
 
 function renderCargando(containerId) {
     const container = document.getElementById(containerId);
@@ -178,7 +177,7 @@ function renderAlertas(containerId, alertas, pendientes = true) {
 
 async function eliminarAlerta(alertaId) {
     try {
-        const response = await fetch('/api/api_alertas.php', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: `alerta_id=${encodeURIComponent(alertaId)}`
@@ -197,7 +196,7 @@ async function eliminarAlerta(alertaId) {
 
 async function eliminarTodasAlertas(estado) {
     try {
-        const response = await fetch('/api/api_alertas.php', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: `all=true&estado=${encodeURIComponent(estado)}`
@@ -217,7 +216,7 @@ async function eliminarTodasAlertas(estado) {
 async function actualizarEstadoAlerta(alertaId, nuevoEstado) {
     showRefreshIndicator();
     try {
-        const response = await fetch('/api/api_alertas.php', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ alerta_id: alertaId, estado: nuevoEstado })
@@ -309,7 +308,7 @@ function stopAutoRefresh() {
 
 async function checkForNewAlerts() {
     try {
-        const response = await fetch('/api/api_alertas.php?estado=pendiente', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_alertas.php?estado=pendiente', {
             method: 'GET',
         });
         
@@ -366,7 +365,7 @@ async function checkForNewAlerts() {
         } else {
             // Verificar si es un error de sesión
             if (data.message && data.message.includes('Sesión no válida')) {
-                window.location.href = '/login';
+                window.location.href = (window.BASE_PATH || '') + '/index.php?route=login';
                 return;
             }
             

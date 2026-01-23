@@ -1,8 +1,7 @@
 <?php
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /login');
-    exit;
+    redirect_to('index.php?route=login');
 }
 
 // Obtener datos del usuario de la sesión
@@ -34,6 +33,10 @@ $user_email = $_SESSION['user_email'];
             cursor: grab;
         }
     </style>
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
     <!-- Modal para confirmar cierre de sesión -->
@@ -200,9 +203,14 @@ $user_email = $_SESSION['user_email'];
                         <!-- Preview de la imagen -->
                         <div id="imagePreview" class="mt-2 hidden">
                             <img id="previewImage" class="max-h-40 rounded-lg mx-auto" alt="Preview">
-                            <button type="button" id="removeImage" class="mt-2 text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-400 text-sm">
-                                <i class="fas fa-trash mr-1"></i>Eliminar imagen
-                            </button>
+                            <div class="flex justify-center gap-3 mt-2">
+                                <button type="button" id="cropImageBtn" class="text-sm text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-lg">
+                                    <i class="fas fa-crop mr-1"></i>Recortar imagen
+                                </button>
+                                <button type="button" id="removeImage" class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-400 text-sm px-3 py-1 rounded-lg">
+                                    <i class="fas fa-trash mr-1"></i>Eliminar imagen
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <button type="submit" class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
@@ -226,6 +234,37 @@ $user_email = $_SESSION['user_email'];
                         <span class="sr-only">Cerrar modal</span>
                     </button>
                 </div>
+
+    <!-- Modal para recortar imagen -->
+    <div id="imageCropModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Recortar imagen</h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="imageCropModal">
+                        <i class="fas fa-times"></i>
+                        <span class="sr-only">Cerrar modal</span>
+                    </button>
+                </div>
+                <div class="p-4 md:p-5">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Arrastra para mover y usa el control de zoom para ajustar. El resultado será un cuadrado de 500×500 px.</p>
+                    <div class="flex flex-col items-center gap-3">
+                        <div id="cropCanvasWrapper" class="bg-gray-100 rounded-lg overflow-hidden" style="width:480px;height:480px;">
+                            <canvas id="cropCanvas" width="480" height="480" style="display:block;width:480px;height:480px;"></canvas>
+                        </div>
+                        <div class="w-full flex items-center gap-3">
+                            <label class="text-sm text-gray-500">Zoom</label>
+                            <input id="cropZoom" type="range" min="0" max="3" step="0.01" value="0" class="w-full">
+                        </div>
+                        <div class="flex gap-2">
+                            <button id="confirmCropBtn" type="button" class="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg">Confirmar recorte</button>
+                            <button id="cancelCropBtn" type="button" class="text-gray-700 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg" data-modal-hide="imageCropModal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                 <form id="editProductForm" class="p-4 md:p-5" enctype="multipart/form-data">
                     <input type="hidden" id="editProductId" name="id">
                     <div class="mb-4" hidden>
@@ -267,9 +306,14 @@ $user_email = $_SESSION['user_email'];
                         <!-- Preview de la imagen -->
                         <div id="editImagePreview" class="mt-2 hidden">
                             <img id="editPreviewImage" class="max-h-40 rounded-lg mx-auto" alt="Preview">
-                            <button type="button" id="removeEditImage" class="mt-2 text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-400 text-sm">
-                                <i class="fas fa-trash mr-1"></i>Eliminar imagen
-                            </button>
+                            <div class="flex justify-center gap-3 mt-2">
+                                <button type="button" id="cropEditImageBtn" class="text-sm text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-lg">
+                                    <i class="fas fa-crop mr-1"></i>Recortar imagen
+                                </button>
+                                <button type="button" id="removeEditImage" class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-400 text-sm px-3 py-1 rounded-lg">
+                                    <i class="fas fa-trash mr-1"></i>Eliminar imagen
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <button type="submit" id="editProductSubmitBtn" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -320,31 +364,37 @@ $user_email = $_SESSION['user_email'];
                 
                 <ul class="space-y-2 font-medium mt-5">
                     <li>
-                        <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=dashboard'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-home w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Área de Trabajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/menu" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=menu'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
                             <i class="fas fa-utensils w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Menú</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/qr" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=qr'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-qrcode w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Códigos QR</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/alertas" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=alertas'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-chart-bar w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Alertas</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=analitica'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-chart-line w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
+                            <span class="ml-3">Analítica</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_path('index.php?route=configuracion'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-cog w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Configuración</span>
                         </a>
@@ -463,8 +513,8 @@ $user_email = $_SESSION['user_email'];
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
-    <script src="/public/js/script.js"></script>
-    <script src="/public/js/menu.js"></script>
+
+    <script src="<?php echo base_path('public/js/script.js'); ?>"></script>
+    <script src="<?php echo base_path('public/js/menu.js'); ?>"></script>
 </body>
 </html> 

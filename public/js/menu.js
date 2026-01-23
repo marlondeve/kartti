@@ -425,6 +425,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const imagePreview = document.getElementById('imagePreview');
             imageInputContainer.classList.remove('hidden');
             imagePreview.classList.add('hidden');
+            croppedBlobForCreate = null;
         }
     });
     
@@ -444,6 +445,16 @@ document.addEventListener('DOMContentLoaded', function() {
         placement: 'center',
         backdrop: 'static',
         closable: true,
+        onHide: () => {
+            // resetear form y preview cuando se cierra el modal de edición
+            const form = document.getElementById('editProductForm');
+            if (form) form.reset();
+            const imageInputContainer = document.getElementById('editProductImage')?.parentElement;
+            const imagePreview = document.getElementById('editImagePreview');
+            if (imageInputContainer) imageInputContainer.classList.remove('hidden');
+            if (imagePreview) imagePreview.classList.add('hidden');
+            croppedBlobForEdit = null;
+        }
     });
     
     deleteProductModal = new window.Modal(document.getElementById('deleteProductModal'), {
@@ -454,7 +465,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Logout modal
     document.getElementById('confirmLogout').addEventListener('click', function() {
-        window.location.href = "/logout";
+        var r = window.USE_PRETTY_URLS ? (window.BASE_PATH + '/logout') : (window.BASE_PATH + '/index.php?route=logout');
+        window.location.href = r;
     });
     
     // Cargar categorías existentes
@@ -470,6 +482,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Manejar la preview de la imagen
+    let croppedBlobForCreate = null;
+    let croppedBlobForEdit = null;
+    let currentCropTarget = null; // 'create' o 'edit'
+    let cropImage = null;
+    let cropState = { scale: 1, offsetX: 0, offsetY: 0, dragging: false, lastX: 0, lastY: 0 };
+    const DISPLAY_SIZE = 480; // canvas display size (px)
+
     document.getElementById('productImage').addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (file) {
@@ -495,6 +514,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 imageInputContainer.classList.add('hidden');
                 previewImage.src = e.target.result;
                 preview.classList.remove('hidden');
+                // Reset any previous crop
+                croppedBlobForCreate = null;
             }.bind(this);
             reader.readAsDataURL(file);
         }
@@ -509,14 +530,218 @@ document.addEventListener('DOMContentLoaded', function() {
         imageInput.value = '';
         imagePreview.classList.add('hidden');
         imageInputContainer.classList.remove('hidden');
+        croppedBlobForCreate = null;
     });
     
+    // Inicializar modal de recorte
+    const cropModal = new window.Modal(document.getElementById('imageCropModal'), {
+        placement: 'center', backdrop: 'dynamic', backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40', closable: true,
+        onHide: () => {
+            // limpiar estado
+            cropImage = null;
+            cropState = { scale: 1, offsetX: 0, offsetY: 0, dragging: false, lastX: 0, lastY: 0 };
+            document.getElementById('cropZoom').value = 1;
+            const ctx = document.getElementById('cropCanvas').getContext('2d');
+            ctx.clearRect(0,0,DISPLAY_SIZE,DISPLAY_SIZE);
+        }
+    });
+
+    // Funciones del recortador
+    function initCrop(src, target) {
+        currentCropTarget = target; // 'create' o 'edit'
+        cropImage = new Image();
+        cropImage.onload = function() {
+            // establecer scale mínimo para cubrir el área
+            const minScale = Math.max(DISPLAY_SIZE / cropImage.width, DISPLAY_SIZE / cropImage.height);
+            // el slider representa zoom adicional sobre minScale; iniciar sin zoom extra
+            cropState.minScale = minScale;
+            cropState.maxScale = 3;
+            cropState.scale = cropState.minScale;
+            // centrar
+            cropState.offsetX = (DISPLAY_SIZE - cropImage.width * cropState.scale) / 2;
+            cropState.offsetY = (DISPLAY_SIZE - cropImage.height * cropState.scale) / 2;
+
+            const zoomInput = document.getElementById('cropZoom');
+            zoomInput.min = 0;
+            zoomInput.max = (cropState.maxScale - cropState.minScale).toFixed(2);
+            zoomInput.step = 0.01;
+            zoomInput.value = 0;
+
+            renderCropCanvas();
+             // DEBUG: Verificar que el modal existe
+        const modalEl = document.getElementById('imageCropModal');
+        console.log('Modal encontrado:', modalEl);
+        console.log('Intentando mostrar modal de recorte');
+        
+        // Forzar z-index alto ANTES de mostrar
+        if (modalEl) {
+            modalEl.style.zIndex = '9999'; // Muy alto para estar por encima de todo
+        }
+        
+        // Intentar mostrar el modal
+        try {
+            cropModal.show();
+            console.log('cropModal.show() llamado');
+            
+            // Verificar después de un momento si se mostró
+            setTimeout(() => {
+                const isVisible = !modalEl.classList.contains('hidden');
+                console.log('Modal visible después de show():', isVisible);
+                console.log('Display style:', window.getComputedStyle(modalEl).display);
+                console.log('Z-index:', window.getComputedStyle(modalEl).zIndex);
+            }, 100);
+        } catch (error) {
+            console.error('Error al mostrar modal:', error);
+        }
+            cropModal.show();
+        };
+        cropImage.src = src;
+    }
+
+    function renderCropCanvas() {
+        const canvas = document.getElementById('cropCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0,0,DISPLAY_SIZE,DISPLAY_SIZE);
+        if (!cropImage) return;
+
+        const destW = cropImage.width * cropState.scale;
+        const destH = cropImage.height * cropState.scale;
+        const dx = cropState.offsetX;
+        const dy = cropState.offsetY;
+
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0,0,DISPLAY_SIZE,DISPLAY_SIZE);
+        ctx.drawImage(cropImage, dx, dy, destW, destH);
+    }
+
+    // Eventos de interacción en canvas
+    const cropCanvasEl = document.getElementById('cropCanvas');
+    cropCanvasEl.addEventListener('pointerdown', function(e) {
+        e.preventDefault();
+        cropState.dragging = true;
+        cropState.lastX = e.clientX;
+        cropState.lastY = e.clientY;
+        cropCanvasEl.setPointerCapture(e.pointerId);
+    });
+    cropCanvasEl.addEventListener('pointermove', function(e) {
+        if (!cropState.dragging) return;
+        const dx = e.clientX - cropState.lastX;
+        const dy = e.clientY - cropState.lastY;
+        cropState.lastX = e.clientX;
+        cropState.lastY = e.clientY;
+        cropState.offsetX += dx;
+        cropState.offsetY += dy;
+        // limitar para que no deje huecos
+        const destW = cropImage.width * cropState.scale;
+        const destH = cropImage.height * cropState.scale;
+        cropState.offsetX = Math.min(0, Math.max(cropState.offsetX, DISPLAY_SIZE - destW));
+        cropState.offsetY = Math.min(0, Math.max(cropState.offsetY, DISPLAY_SIZE - destH));
+        renderCropCanvas();
+    });
+    cropCanvasEl.addEventListener('pointerup', function(e) {
+        cropState.dragging = false;
+        try { cropCanvasEl.releasePointerCapture(e.pointerId); } catch (err) {}
+    });
+    cropCanvasEl.addEventListener('pointercancel', function(e) { cropState.dragging = false; });
+
+    // Zoom
+    document.getElementById('cropZoom').addEventListener('input', function(e) {
+        const oldScale = cropState.scale;
+        const sliderVal = parseFloat(e.target.value);
+        const newScale = (cropState.minScale || 1) + (isNaN(sliderVal) ? 0 : sliderVal);
+        // mantener el centro al cambiar zoom
+        const centerX = DISPLAY_SIZE / 2;
+        const centerY = DISPLAY_SIZE / 2;
+
+        // coordenadas de centro en espacio de imagen antes del zoom
+        const imgCenterX = (centerX - cropState.offsetX) / oldScale;
+        const imgCenterY = (centerY - cropState.offsetY) / oldScale;
+
+        cropState.scale = newScale;
+
+        // recalcular offset para mantener el mismo punto en el centro
+        cropState.offsetX = centerX - imgCenterX * cropState.scale;
+        cropState.offsetY = centerY - imgCenterY * cropState.scale;
+
+        const destW = cropImage.width * cropState.scale;
+        const destH = cropImage.height * cropState.scale;
+        cropState.offsetX = Math.min(0, Math.max(cropState.offsetX, DISPLAY_SIZE - destW));
+        cropState.offsetY = Math.min(0, Math.max(cropState.offsetY, DISPLAY_SIZE - destH));
+
+        renderCropCanvas();
+    });
+
+    // Botones para abrir el recortador
+    document.getElementById('cropImageBtn').addEventListener('click', function() {
+        const src = document.getElementById('previewImage').src;
+        if (!src) return utils.showNotification('error', 'No hay imagen para recortar');
+        initCrop(src, 'create');
+    });
+    document.getElementById('cropEditImageBtn').addEventListener('click', function() {
+        const src = document.getElementById('editPreviewImage').src;
+        if (!src) return utils.showNotification('error', 'No hay imagen para recortar');
+        initCrop(src, 'edit');
+    });
+
+    // Confirmar recorte: generar Blob 500x500 y actualizar preview
+    document.getElementById('confirmCropBtn').addEventListener('click', function() {
+        if (!cropImage) return;
+        // calcular el rect en la imagen fuente que corresponde al canvas
+        const destW = cropImage.width * cropState.scale;
+        const destH = cropImage.height * cropState.scale;
+        const sx = Math.max(0, (-cropState.offsetX) / cropState.scale);
+        const sy = Math.max(0, (-cropState.offsetY) / cropState.scale);
+        const sWidth = Math.min(cropImage.width - sx, DISPLAY_SIZE / cropState.scale);
+        const sHeight = Math.min(cropImage.height - sy, DISPLAY_SIZE / cropState.scale);
+
+        const outCanvas = document.createElement('canvas');
+        outCanvas.width = 500;
+        outCanvas.height = 500;
+        const outCtx = outCanvas.getContext('2d');
+        outCtx.fillStyle = '#ffffff';
+        outCtx.fillRect(0,0,500,500);
+
+        outCtx.drawImage(cropImage, sx, sy, sWidth, sHeight, 0, 0, 500, 500);
+
+        outCanvas.toBlob(function(blob) {
+            if (!blob) return utils.showNotification('error', 'Error al generar la imagen recortada');
+            // asignar blob al objetivo correspondiente
+            if (currentCropTarget === 'create') {
+                croppedBlobForCreate = blob;
+                // actualizar preview con blob
+                const prev = document.getElementById('previewImage');
+                prev.src = URL.createObjectURL(blob);
+                // asegurarse de mostrar preview
+                document.getElementById('imagePreview').classList.remove('hidden');
+                document.getElementById('productImage').parentElement.classList.add('hidden');
+            } else if (currentCropTarget === 'edit') {
+                croppedBlobForEdit = blob;
+                const prev = document.getElementById('editPreviewImage');
+                prev.src = URL.createObjectURL(blob);
+                document.getElementById('editImagePreview').classList.remove('hidden');
+                document.getElementById('editProductImage').parentElement.classList.add('hidden');
+            }
+
+            cropModal.hide();
+            utils.showNotification('success', 'Recorte aplicado');
+        }, 'image/jpeg', 0.9);
+    });
+
+    document.getElementById('cancelCropBtn').addEventListener('click', function() {
+        cropModal.hide();
+    });
+
     // Manejar el envío del formulario de creación de producto
     document.getElementById('createProductForm').addEventListener('submit', function(e) {
         e.preventDefault();
         
         const formData = new FormData(this);
         formData.append('action', 'create');
+        // Si hay un recorte realizado en el cliente, reemplazar el archivo por el blob recortado
+        if (croppedBlobForCreate) {
+            formData.set('imagen', croppedBlobForCreate, 'producto.jpg');
+            console.debug('menu.js: Enviando imagen recortada (create)');
+        }
         
         const nombreProducto = formData.get('nombre');
         if (nombreProducto) {
@@ -1041,7 +1266,10 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.append('categoria_id', categoryId);
             
             const imageInput = document.getElementById('editProductImage');
-            if (imageInput.files.length > 0) {
+            if (croppedBlobForEdit) {
+                formData.append('imagen', croppedBlobForEdit, 'producto.jpg');
+                console.debug('menu.js: Enviando imagen recortada (edit)');
+            } else if (imageInput.files.length > 0) {
                 formData.append('imagen', imageInput.files[0]);
             }
             

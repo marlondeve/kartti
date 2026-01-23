@@ -1,24 +1,32 @@
 RewriteEngine On
-RewriteBase /
+RewriteBase /kartti/
 
-# Permitir acceso directo a archivos existentes
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# Enrutamiento especial: delegar las solicitudes a /carta/* al front controller
+# para habilitar el tracking y servir correctamente `carta/menu.html`
+# Esta regla debe ir ANTES de la regla que sirve archivos existentes
+# Maneja tanto carta/ como carta/archivo.ext
+RewriteRule ^carta/?$ index.php?route=carta/ [QSA,L]
+RewriteRule ^carta/(.*)$ index.php?route=carta/$1 [QSA,L]
 
-# Permitir acceso directo a archivos CSS y JS
-RewriteRule ^public/css/.*\.css$ - [L]
-RewriteRule ^public/js/.*\.js$ - [L]
+# Si la petición corresponde a un fichero o directorio existente, servirlo directamente
+# EXCEPTO para archivos de carta/ que deben pasar por index.php
+RewriteCond %{REQUEST_URI} !^/kartti/carta
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# Permitir acceso directo a archivos de la API
-RewriteRule ^api/.*\.php$ - [L]
+# Reglas explícitas para recursos estáticos y API (por redundancia)
+RewriteRule ^public/(css|js)/.*$ - [L]
+RewriteRule ^api/.*$ - [L]
+RewriteRule ^uploads/.*$ - [L]
 
 # Redirigir la raíz a index.php con route=landing
-RewriteRule ^$ index.php?route=landing [L]
+RewriteRule ^$ index.php?route=landing [L,QSA]
 
-# Redirigir todas las demás solicitudes a index.php
+# Redirigir todas las demás solicitudes a index.php (front controller)
 RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
 
 # Headers de seguridad
 Header set X-Content-Type-Options "nosniff"
 Header set X-XSS-Protection "1; mode=block"
-Header set X-Frame-Options "SAMEORIGIN" 
+Header set X-Frame-Options "SAMEORIGIN"

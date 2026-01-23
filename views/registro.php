@@ -6,7 +6,11 @@
     <title>Registro - <?php echo APP_NAME; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_path('public/css/styles.css'); ?>">
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
     <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -15,12 +19,12 @@
                 <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white">Crear una cuenta</h2>
                 <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
                     ¿Ya tienes una cuenta?
-                    <a href="/login" class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-500 dark:hover:text-blue-400">
+                    <a href="<?php echo base_path('index.php?route=login'); ?>" class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-500 dark:hover:text-blue-400">
                         Inicia sesión aquí
                     </a>
                 </p>
             </div>
-            <form class="mt-8 space-y-6" id="registroForm" action="/api/api_auth.php" method="POST">
+            <form class="mt-8 space-y-6" id="registroForm" action="<?php echo base_path('api/api_auth.php'); ?>" method="POST">
                 <div class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nombre completo</label>
@@ -67,6 +71,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="<?php echo base_path('public/js/script.js'); ?>"></script>
 </body>
 </html> 

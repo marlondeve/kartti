@@ -87,7 +87,72 @@
         ]
     },
     "Comida rapida": {
-        "status": "inactivo",
-        "products": []
+        "status": "activo",
+        "products": [
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            },
+            {
+                "name": "Mojito Clásico",
+                "price": "$2,000",
+                "description": "Ron blanco, hierbabuena fresca, azúcar, limón y soda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/68b5b79fad35d_1756739487.jpg",
+                "status": "activo"
+            }
+        ]
+    },
+    "_settings": {
+        "call_waiter_enabled": false,
+        "whatsapp": "3173202745",
+        "colors": {
+            "background": "#1A0B12",
+            "card_background": "#2B1320",
+            "primary": "#F472B8",
+            "primary_dark": "#F472B8",
+            "primary_light": "#FFFFFF",
+            "text_primary": "#F472B8",
+            "text_secondary": "#F472B8",
+            "header_bg": "#2B1320",
+            "header_text": "#F172B7"
+        }
     }
 }

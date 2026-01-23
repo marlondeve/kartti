@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="es" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartti - Menús Digitales con QR para Restaurantes y Bares</title>
+    <meta name="description" content="Transforma tu restaurante con Kartti, la plataforma de menús digitales con QR dinámicos. Ofrece una experiencia interactiva, actualiza tu menú en tiempo real y ahorra costos." />
+    <meta name="keywords" content="menú digital, código QR, restaurantes, bares, menú interactivo, qr dinámico, kartti" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="https://kartti.com/uploads/img/2.png" type="image/x-icon">
     <script>
@@ -23,6 +26,10 @@
       }
     </script>
     <title>Kartti</title>
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
   </head>
    <body class="bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-200">
     <nav
@@ -97,7 +104,7 @@
 
           <button
             type="button"
-            onclick="window.location.href='/login'"
+            onclick="(function(){ var r = window.USE_PRETTY_URLS ? (window.BASE_PATH + '/login') : (window.BASE_PATH + '/index.php?route=login'); window.location.href = r; })()"
             class="text-white bg-blue-700 dark:bg-blue-600 transform transition-transform duration-300 hover:bg-blue-800 dark:hover:bg-blue-700 hover:scale-105 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Iniciar Sesión

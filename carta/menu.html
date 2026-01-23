@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col justify-center items-center max-h-screen bg-[#1a1a1a]">
+<body class="flex flex-col h-screen overflow-hidden items-center" style="background-color: var(--color-background, #1a1a1a);">
     <div id="spinnerOverlay" class="spinner-overlay">
         <div role="status">
             <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#B38D57]" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,18 +16,19 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <div class="flex flex-col justify-center items-center bg-[#272728] w-[90%] p-2 mt-5 rounded-2xl drop-shadow-lg">
-        <h1 id="restaurantTitle" style="text-transform: uppercase;" class="text-[#B38D57] text-3xl font-bold">Cargando...</h1>
-        <p id="qrTitle" class="text-[#E4C57F] text-sm font-normal mt-1"></p>
+    <!-- Header de la carta centrado -->
+    <div class="flex flex-col justify-center items-center w-[90%] p-3 mt-4 rounded-2xl drop-shadow-lg flex-shrink-0 mx-auto" style="background-color: var(--color-card-background, #272728);">
+        <h1 id="restaurantTitle" style="text-transform: uppercase; color: var(--color-header-text, #B38D57);" class="text-2xl sm:text-3xl font-bold leading-tight text-center">Cargando...</h1>
+        <p id="qrTitle" style="color: var(--color-text-primary, #E4C57F);" class="text-xs sm:text-sm font-normal mt-1 text-center"></p>
     </div>
-    <nav class="w-full nav-container ">
-        <div class=" left-10 overflow-x-auto hide-scrollbar " style="padding: 0 2.5rem;">
-            <div class="flex lg:justify-center md:justify-center sm:justify-center items-center space-x-1 p-4 max-w-[95%] mx-auto pr-16">
+    <nav class="w-full nav-container flex-shrink-0">
+        <div class="left-10 overflow-x-auto hide-scrollbar" style="padding: 0 2.5rem;">
+            <div class="flex lg:justify-center md:justify-center sm:justify-center items-center space-x-2 p-3 max-w-[95%] mx-auto pr-16">
                 <!-- Los botones se generarán dinámicamente -->
             </div>
         </div>
-                <!-- Botón circular para ver todas las categorías (solo si hay más de 3) -->
-        <button id="btnTodasCategorias" class="absolute left-4 top-1/2 transform -translate-y-1/2 hidden z-20 w-12 h-12 bg-gradient-to-r from-[#B38D57] to-[#80653E] rounded-full shadow-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 pulse-animation border-2 border-[#E4C57F]">
+        <!-- Botón circular para ver todas las categorías (solo si hay más de 3) -->
+        <button id="btnTodasCategorias" class="absolute left-4 top-1/2 transform -translate-y-1/2 hidden z-20 w-12 h-12 rounded-full shadow-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 pulse-animation border-2" style="background: linear-gradient(to right, var(--color-primary, #B38D57), var(--color-primary-dark, #80653E)); border-color: var(--color-primary-light, #E4C57F);">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -35,11 +36,11 @@
     </nav>
        <!-- Modal para mostrar todas las categorías -->
     <div id="modalTodasCategorias" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#272728] rounded-2xl mx-4 max-w-md w-full shadow-2xl border border-[#B38D57] overflow-hidden my-auto max-h-[80vh]">
+        <div class="rounded-2xl mx-4 max-w-md w-full shadow-2xl overflow-hidden my-auto max-h-[80vh]" style="background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold text-[#B38D57]">Todas las Categorías</h2>
-                    <button id="btnCerrarModalCategorias" class="text-[#E4C57F] hover:text-white transition-colors">
+                    <h2 class="text-2xl font-bold" style="color: var(--color-primary, #B38D57);">Todas las Categorías</h2>
+                    <button id="btnCerrarModalCategorias" class="transition-colors" style="color: var(--color-text-primary, #E4C57F);">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -51,31 +52,30 @@
             </div>
         </div>
     </div>
-    <main id="mainContainer" class="w-full p-4 pb-24 relative overflow-x-hidden overflow-y-auto hide-scrollbar px-[5%]">
-        <div id="sliderWrapper" class="flex transition-transform duration-300 ease-in-out -mx-[4%]">
+    <main id="mainContainer" class="w-full flex-1 overflow-hidden px-4 pb-24 relative" style="padding-left: 0.6rem; overflow: initial;">
+        <div id="sliderWrapper" class="flex transition-transform duration-300 ease-in-out h-full" style="width: 100%;">
             <!-- Cards will be generated here -->
         </div>
         <div class="fixed left-0 top-1/2 transform -translate-y-1/2 z-10 hidden" id="prevBtn">
-            <button class="bg-[#272728] text-[#B38D57] p-2 rounded-r-lg shadow-lg">
-                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.99115 11.79L14.6511 6.14004C14.7441 6.04631 14.8547 5.97191 14.9766 5.92115C15.0984 5.87038 15.2291 5.84424 15.3611 5.84424C15.4932 5.84424 15.6239 5.87038 15.7457 5.92115C15.8676 5.97191 15.9782 6.04631 16.0711 6.14004C16.2574 6.3274 16.3619 6.58085 16.3619 6.84504C16.3619 7.10922 16.2574 7.36267 16.0711 7.55004L11.1211 12.55L16.0711 17.5C16.2574 17.6874 16.3619 17.9409 16.3619 18.205C16.3619 18.4692 16.2574 18.7227 16.0711 18.91C15.9785 19.0045 15.8681 19.0797 15.7462 19.1312C15.6243 19.1827 15.4935 19.2095 15.3611 19.21C15.2288 19.2095 15.098 19.1827 14.9761 19.1312C14.8542 19.0797 14.7438 19.0045 14.6511 18.91L8.99115 13.26C8.88964 13.1664 8.80863 13.0527 8.75323 12.9262C8.69782 12.7997 8.66921 12.6631 8.66921 12.525C8.66921 12.3869 8.69782 12.2503 8.75323 12.1238C8.80863 11.9973 8.88964 11.8837 8.99115 11.79Z" fill="#B38D57"/>
+            <button class="p-2 rounded-r-lg shadow-lg" style="background-color: var(--color-card-background, #272728); color: var(--color-primary, #B38D57);" id="prevBtnButton">
+                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="prevBtnSvg">
+                    <path d="M8.99115 11.79L14.6511 6.14004C14.7441 6.04631 14.8547 5.97191 14.9766 5.92115C15.0984 5.87038 15.2291 5.84424 15.3611 5.84424C15.4932 5.84424 15.6239 5.87038 15.7457 5.92115C15.8676 5.97191 15.9782 6.04631 16.0711 6.14004C16.2574 6.3274 16.3619 6.58085 16.3619 6.84504C16.3619 7.10922 16.2574 7.36267 16.0711 7.55004L11.1211 12.55L16.0711 17.5C16.2574 17.6874 16.3619 17.9409 16.3619 18.205C16.3619 18.4692 16.2574 18.7227 16.0711 18.91C15.9785 19.0045 15.8681 19.0797 15.7462 19.1312C15.6243 19.1827 15.4935 19.2095 15.3611 19.21C15.2288 19.2095 15.098 19.1827 14.9761 19.1312C14.8542 19.0797 14.7438 19.0045 14.6511 18.91L8.99115 13.26C8.88964 13.1664 8.80863 13.0527 8.75323 12.9262C8.69782 12.7997 8.66921 12.6631 8.66921 12.525C8.66921 12.3869 8.69782 12.2503 8.75323 12.1238C8.80863 11.9973 8.88964 11.8837 8.99115 11.79Z" fill="currentColor"/>
                 </svg>
             </button>
         </div>
         <div class="fixed right-0 top-1/2 transform -translate-y-1/2 z-10 hidden" id="nextBtn">
-            <button class="bg-[#272728] text-[#B38D57] p-2 rounded-l-lg shadow-lg">
-                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.0089 11.79L10.3489 6.14004C10.2559 6.04631 10.1453 5.97191 10.0234 5.92115C9.90156 5.87038 9.77086 5.84424 9.63886 5.84424C9.50685 5.84424 9.37615 5.87038 9.25433 5.92115C9.13251 5.97191 9.02183 6.04631 8.92886 6.14004C8.74258 6.3274 8.63806 6.58085 8.63806 6.84504C8.63806 7.10922 8.74258 7.36267 8.92886 7.55004L13.8789 12.55L8.92886 17.5C8.74258 17.6874 8.63806 17.9409 8.63806 18.205C8.63806 18.4692 8.74258 18.7227 8.92886 18.91C9.02147 19.0045 9.13187 19.0797 9.25378 19.1312C9.37569 19.1827 9.50649 19.2095 9.63886 19.21C9.77122 19.2095 9.90202 19.1827 10.0239 19.1312C10.1458 19.0797 10.2562 19.0045 10.3489 18.91L16.0089 13.26C16.1104 13.1664 16.1914 13.0527 16.2468 12.9262C16.3022 12.7997 16.3308 12.6631 16.3308 12.525C16.3308 12.3869 16.3022 12.2503 16.2468 12.1238C16.1914 11.9973 16.1104 11.8837 16.0089 11.79Z" fill="#B38D57"/>
+            <button class="p-2 rounded-l-lg shadow-lg" style="background-color: var(--color-card-background, #272728); color: var(--color-primary, #B38D57);" id="nextBtnButton">
+                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="nextBtnSvg">
+                    <path d="M16.0089 11.79L10.3489 6.14004C10.2559 6.04631 10.1453 5.97191 10.0234 5.92115C9.90156 5.87038 9.77086 5.84424 9.63886 5.84424C9.50685 5.84424 9.37615 5.87038 9.25433 5.92115C9.13251 5.97191 9.02183 6.04631 8.92886 6.14004C8.74258 6.3274 8.63806 6.58085 8.63806 6.84504C8.63806 7.10922 8.74258 7.36267 8.92886 7.55004L13.8789 12.55L8.92886 17.5C8.74258 17.6874 8.63806 17.9409 8.63806 18.205C8.63806 18.4692 8.74258 18.7227 8.92886 18.91C9.02147 19.0045 9.13187 19.0797 9.25378 19.1312C9.37569 19.1827 9.50649 19.2095 9.63886 19.21C9.77122 19.2095 9.90202 19.1827 10.0239 19.1312C10.1458 19.0797 10.2562 19.0045 10.3489 18.91L16.0089 13.26C16.1104 13.1664 16.1914 13.0527 16.2468 12.9262C16.3022 12.7997 16.3308 12.6631 16.3308 12.525C16.3308 12.3869 16.3022 12.2503 16.2468 12.1238C16.1914 11.9973 16.1104 11.8837 16.0089 11.79Z" fill="currentColor"/>
                 </svg>
             </button>
         </div>
     </main>
-    <section class="fixed bottom-0 left-0 right-0 flex flex-col items-center gap-4 bg-[#1a1a1a]">
-        <div id="dotsContainer" class="flex items-center gap-2 p-2  ">
+    <section class="fixed bottom-0 left-0 right-0 flex flex-col items-center gap-2 flex-shrink-0" style="background-color: var(--color-background, #1a1a1a); padding-top: 8px; padding-bottom: 8px;">
+        <div id="dotsContainer" class="flex items-center gap-2 p-2">
             <!-- Dots will be added dynamically -->
         </div>
-        <button id="btnLlamarMesero" onclick="llamarMesero()" class="hidden flex items-center justify-center gap-2
-        bg-gradient-to-r from-[#4D3D25] via-[#B38D57] via-[#80653E] to-[#4D3D25] p-2 px-4 mb-4 rounded-2xl shadow-lg text-white font-normal">
+        <button id="btnLlamarMesero" onclick="llamarMesero()" class="hidden flex items-center justify-center gap-2 p-2 px-4 mb-2 rounded-2xl shadow-lg text-white font-normal text-sm" style="background: linear-gradient(to right, var(--color-primary-dark, #4D3D25), var(--color-primary, #B38D57), var(--color-primary-dark, #80653E), var(--color-primary-dark, #4D3D25));">
         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 5.464V3.099m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175C19 17.4 19 18 18.462 18H5.538C5 18 5 17.4 5 16.807c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 12 5.464ZM6 5 5 4M4 9H3m15-4 1-1m1 5h1M8.54 18a3.48 3.48 0 0 0 6.92 0H8.54Z"/>
           </svg>
@@ -85,19 +85,25 @@
             <input type="hidden" id="mesa_id" value="">
             <input type="hidden" id="qrNombre" value="">
             <input type="hidden" id="qrTipo" value="">
+
+            <!-- WhatsApp button (bottom-right, visible on all viewports) -->
+            <a id="btnWhatsApp" class="hidden fixed right-6 bottom-6 z-50 w-14 h-14 bg-white hover:bg-gray-100 rounded-full shadow-xl flex items-center justify-center transform transition-transform duration-200 border border-gray-200" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <!-- Solo el logo (sin fallback SVG) -->
+                <img id="whatsappLogo" src="https://images.icon-icons.com/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="WhatsApp" class="w-12 h-12 object-contain" onerror="this.style.display='none'">
+            </a>
     </section>
 
     <!-- Modal de confirmación -->
     <div id="modalConfirmacion" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#272728] rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl border border-[#B38D57]">
+        <div class="rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl" style="background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
             <div class="text-center">
-                <div class="w-16 h-16 mx-auto mb-4 bg-[#B38D57] rounded-full flex items-center justify-center">
-                    <svg class="w-8 h-8 text-[#272728]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--color-primary, #B38D57);">
+                    <svg class="w-8 h-8" style="color: var(--color-card-background, #272728);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-[#B38D57] mb-2">¿Llamar al mesero?</h3>
-                <p class="text-[#E4C57F] mb-6">Se enviará una notificación al personal del restaurante</p>
+                <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary, #B38D57);">¿Llamar al mesero?</h3>
+                <p class="mb-6" style="color: var(--color-text-primary, #E4C57F);">Se enviará una notificación al personal del restaurante</p>
                 <div class="flex gap-3">
                     <button id="btnCancelar" class="flex-1 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors">
                         Cancelar
@@ -110,9 +116,30 @@
         </div>
     </div>
 
+    <!-- Modal de confirmación para WhatsApp -->
+    <div id="modalWhatsApp" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl" style="background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: white;">
+                    <img src="https://images.icon-icons.com/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="WhatsApp" class="w-12 h-12"> 
+                </div>
+                <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary, #B38D57);">Vas a salir del menú</h3>
+                <p id="modalWhatsAppText" class="mb-6" style="color: var(--color-text-primary, #E4C57F);">Vas a salir del menú y se abrirá WhatsApp. ¿Deseas continuar?</p>
+                <div class="flex gap-3">
+                    <button id="btnCancelarWhatsApp" class="flex-1 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors">
+                        Cancelar
+                    </button>
+                    <button id="btnConfirmarWhatsApp" class="flex-1 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal de éxito -->
     <div id="modalExito" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#272728] rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl border border-green-500">
+        <div class="rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl border border-green-500" style="background-color: var(--color-card-background, #272728);">
             <div class="text-center">
                 <div class="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +147,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-bold text-green-400 mb-2">¡Mesero notificado!</h3>
-                <p class="text-[#E4C57F] mb-6">En breve será atendido</p>
+                <p class="mb-6" style="color: var(--color-text-primary, #E4C57F);">En breve será atendido</p>
                 <button id="btnCerrarExito" class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors">
                     Entendido
                 </button>
@@ -130,7 +157,7 @@
 
     <!-- Modal de error -->
     <div id="modalError" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#272728] rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl border border-red-500">
+        <div class="rounded-2xl p-6 mx-4 max-w-sm w-full shadow-2xl border border-red-500" style="background-color: var(--color-card-background, #272728);">
             <div class="text-center">
                 <div class="w-16 h-16 mx-auto mb-4 bg-red-500 rounded-full flex items-center justify-center">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +165,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-bold text-red-400 mb-2">Error al enviar</h3>
-                <p id="errorMessage" class="text-[#E4C57F] mb-6">Hubo un problema. Intente nuevamente.</p>
+                <p id="errorMessage" class="mb-6" style="color: var(--color-text-primary, #E4C57F);">Hubo un problema. Intente nuevamente.</p>
                 <button id="btnCerrarError" class="px-6 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-medium transition-colors">
                     Cerrar
                 </button>
@@ -147,19 +174,19 @@
     </div>
 
     <div id="modalProducto" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#272728] rounded-2xl mx-4 max-w-md w-full shadow-2xl border border-[#B38D57] overflow-hidden">
+        <div class="rounded-2xl mx-4 max-w-md w-full shadow-2xl overflow-hidden" style="background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
             <!-- Botón cerrar -->
-            <button id="btnCerrarProducto" class="absolute top-4 right-4 z-10 text-[#E4C57F] hover:text-[#B38D57] transition-colors">
+            <button id="btnCerrarProducto" class="absolute top-4 right-4 z-10 transition-colors" style="color: var(--color-text-primary, #E4C57F);">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
             
             <!-- Imagen del producto -->
-            <div id="modalProductoImagen" class="w-full h-64 bg-[#1a1a1a] flex items-center justify-center overflow-hidden">
+            <div id="modalProductoImagen" class="w-full flex items-center justify-center overflow-hidden" style="background-color: var(--color-background, #1a1a1a);">
                 <img id="modalProductoImagenSrc" src="" alt="" class="w-full h-full object-cover">
-                <div id="modalProductoImagenPlaceholder" class="hidden w-full h-full bg-[#272728] flex items-center justify-center">
-                    <svg class="w-24 h-24 text-[#E4C57F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div id="modalProductoImagenPlaceholder" class="hidden w-full h-full flex items-center justify-center" style="background-color: var(--color-card-background, #272728);">
+                    <svg class="w-24 h-24" style="color: var(--color-text-primary, #E4C57F);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
                 </div>
@@ -167,9 +194,13 @@
             
             <!-- Contenido del modal -->
             <div class="p-6">
-                <h2 id="modalProductoNombre" class="text-2xl font-bold text-[#B38D57] mb-3"></h2>
-                <p id="modalProductoPrecio" class="text-xl font-semibold text-[#E4C57F] mb-4"></p>
-                <p id="modalProductoDescripcion" class="text-[#E4C57F] text-sm leading-relaxed"></p>
+                <h2 id="modalProductoNombre" class="text-2xl font-bold mb-3" style="color: var(--color-primary, #B38D57);"></h2>
+                <p id="modalProductoPrecio" class="text-xl font-semibold mb-4" style="color: var(--color-text-primary, #E4C57F);"></p>
+                <p id="modalProductoDescripcion" class="text-sm leading-relaxed mb-4" style="color: var(--color-text-primary, #E4C57F);"></p>
+                <!-- Botón de ocultar -->
+                <button id="btnOcultarProducto" class="w-full px-4 py-2 rounded-lg font-medium transition-colors" style="background-color: var(--color-primary, #B38D57); color: var(--color-card-background, #272728);">
+                    Ocultar
+                </button>
             </div>
         </div>
     </div>

@@ -108,6 +108,117 @@ try {
             ]);
             break;
 
+        case 'update_settings':
+            error_log("Actualizando settings del restaurante (JSON)");
+            // Obtener restaurante del usuario
+            $restaurant = checkUserRestaurant($_SESSION['user_id']);
+            if (empty($restaurant) || empty($restaurant['id'])) {
+                throw new Exception('No se encontró restaurante para el usuario');
+            }
+
+            $restId = $restaurant['id'];
+
+            // Obtener datos (aceptamos JSON o form-url)
+            $nombre = isset($_POST['nombre']) ? trim($_POST['nombre']) : null;
+            $callWaiter = isset($_POST['call_waiter_enabled']) ? (intval($_POST['call_waiter_enabled']) ? 1 : 0) : null;
+            $whatsapp = isset($_POST['whatsapp']) ? trim($_POST['whatsapp']) : null;
+            $colors = isset($_POST['colors']) && is_array($_POST['colors']) ? $_POST['colors'] : null;
+
+            // Validaciones simples
+            if ($nombre !== null && $nombre === '') {
+                throw new Exception('El nombre no puede estar vacío');
+            }
+
+            // Normalizar número de whatsapp (solo dígitos y +)
+            if ($whatsapp !== null && $whatsapp !== '') {
+                $whatsapp = preg_replace('/[^0-9+]/', '', $whatsapp);
+                if (strlen($whatsapp) > 25) {
+                    throw new Exception('Número de WhatsApp demasiado largo');
+                }
+            } else {
+                $whatsapp = null;
+            }
+
+            // Si se envió nombre, actualizar en BD
+            if ($nombre !== null) {
+                $stmt = $pdo->prepare("UPDATE restaurantes SET nombre = ? WHERE id = ?");
+                $stmt->execute([$nombre, $restId]);
+                
+                // Actualizar el nombre en el archivo JSON del QR (qr{id}.json)
+                $qrJsonFile = __DIR__ . '/../public/json/qr' . $restId . '.json';
+                if (file_exists($qrJsonFile)) {
+                    $qrJsonContent = file_get_contents($qrJsonFile);
+                    $qrJsonData = json_decode($qrJsonContent, true);
+                    if (is_array($qrJsonData) && isset($qrJsonData['qrs']) && is_array($qrJsonData['qrs'])) {
+                        // Actualizar el restaurante_nombre en cada QR
+                        foreach ($qrJsonData['qrs'] as &$qr) {
+                            $qr['restaurante_nombre'] = $nombre;
+                        }
+                        unset($qr); // Liberar referencia
+                        
+                        if (file_put_contents($qrJsonFile, json_encode($qrJsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) === false) {
+                            error_log('Advertencia: No se pudo actualizar el archivo JSON del QR');
+                        } else {
+                            error_log('Archivo JSON del QR actualizado correctamente');
+                        }
+                    }
+                }
+            }
+
+            // Guardar call_waiter_enabled y whatsapp en el JSON del restaurante (public/json/restaurante{id}.json)
+            $jsonFile = __DIR__ . '/../public/json/restaurante' . $restId . '.json';
+            $jsonData = [];
+            if (file_exists($jsonFile)) {
+                $raw = file_get_contents($jsonFile);
+                $jsonData = json_decode($raw, true);
+                if (!is_array($jsonData)) $jsonData = [];
+            }
+
+            // Asegurarse de estructura para settings
+            if (!isset($jsonData['_settings']) || !is_array($jsonData['_settings'])) $jsonData['_settings'] = [];
+
+            // Mantener un flag para determinar si se debe escribir el archivo
+            $changed = false;
+
+            // Eliminar restaurante_nombre del JSON del restaurante si existe (no debería estar aquí)
+            if (isset($jsonData['restaurante_nombre'])) {
+                unset($jsonData['restaurante_nombre']);
+                $changed = true;
+            }
+
+            if ($callWaiter !== null) {
+                $jsonData['_settings']['call_waiter_enabled'] = $callWaiter ? true : false;
+                $changed = true;
+            }
+            if ($whatsapp !== null) {
+                $jsonData['_settings']['whatsapp'] = $whatsapp !== '' ? $whatsapp : null;
+                $changed = true;
+            }
+            
+            if ($colors !== null) {
+                // Validar y limpiar colores (solo permitir formato hexadecimal)
+                $validColors = [];
+                foreach ($colors as $key => $value) {
+                    $value = trim($value);
+                    if (preg_match('/^#[0-9A-Fa-f]{6}$/', $value)) {
+                        $validColors[$key] = strtoupper($value);
+                    }
+                }
+                if (!empty($validColors)) {
+                    $jsonData['_settings']['colors'] = $validColors;
+                    $changed = true;
+                }
+            }
+
+            if ($changed) {
+                if (file_put_contents($jsonFile, json_encode($jsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) === false) {
+                    throw new Exception('No se pudo guardar el archivo JSON del restaurante');
+                }
+            }
+
+            echo json_encode(['success' => true, 'message' => 'Configuración actualizada']);
+            break;
+
         default:
             error_log("Acción no válida: " . $action);
             throw new Exception('Acción no válida');

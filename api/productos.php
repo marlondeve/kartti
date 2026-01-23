@@ -152,11 +152,11 @@ try {
                 throw new Exception('El nombre del producto es requerido');
             }
             
-            if (empty($_POST['precio']) || !is_numeric($_POST['precio'])) {
+            if (!isset($_POST['precio']) || $_POST['precio'] === '' || !is_numeric($_POST['precio'])) {
                 throw new Exception('El precio del producto es requerido y debe ser un número');
             }
             
-            // Asegurar que el precio es un entero
+            // Asegurar que el precio es un entero (permite 0)
             $_POST['precio'] = (int) $_POST['precio'];
             
             if (empty($_POST['categoria_id'])) {
@@ -196,6 +196,20 @@ try {
                     error_log("Error al procesar la imagen: " . $e->getMessage());
                     throw new Exception('Error al procesar la imagen: ' . $e->getMessage());
                 }
+            } elseif (isset($_FILES['imagen']) && $_FILES['imagen']['error'] !== UPLOAD_ERR_NO_FILE) {
+                // Solo lanzar error si hay un error real (no cuando no se envió archivo)
+                $errorMap = [
+                    UPLOAD_ERR_INI_SIZE => 'La imagen excede el tamaño máximo permitido por el servidor',
+                    UPLOAD_ERR_FORM_SIZE => 'La imagen excede el tamaño máximo permitido por el formulario',
+                    UPLOAD_ERR_PARTIAL => 'La imagen se subió parcialmente',
+                    UPLOAD_ERR_NO_TMP_DIR => 'Falta el directorio temporal en el servidor',
+                    UPLOAD_ERR_CANT_WRITE => 'Error al escribir el archivo en disco',
+                    UPLOAD_ERR_EXTENSION => 'La subida fue detenida por una extensión del servidor'
+                ];
+                $fileErr = $_FILES['imagen']['error'];
+                $msg = $errorMap[$fileErr] ?? 'Error al subir la imagen (código ' . $fileErr . ')';
+                error_log('Error de subida de imagen: ' . $msg);
+                throw new Exception($msg);
             }
 
             // Insertar el producto
@@ -347,11 +361,11 @@ try {
                 throw new Exception('El nombre del producto es requerido');
             }
             
-            if (empty($_POST['precio']) || !is_numeric($_POST['precio'])) {
+            if (!isset($_POST['precio']) || $_POST['precio'] === '' || !is_numeric($_POST['precio'])) {
                 throw new Exception('El precio del producto es requerido y debe ser un número');
             }
             
-            // Asegurar que el precio es un entero
+            // Asegurar que el precio es un entero (permite 0)
             $_POST['precio'] = (int) $_POST['precio'];
             
             if (empty($_POST['categoria_id'])) {

@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificar Cuenta - <?php echo APP_NAME; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_path('public/css/styles.css'); ?>">
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/landing" class="text-2xl font-bold text-blue-600"><?php echo APP_NAME; ?></a>
+            <a href="<?php echo base_path('index.php?route=landing'); ?>" class="text-2xl font-bold text-blue-600"><?php echo APP_NAME; ?></a>
         </nav>
     </header>
 
@@ -72,7 +76,7 @@
             const codigo = document.getElementById('codigo').value;
             
             try {
-                const response = await fetch('/api/api_auth.php', {
+                const response = await fetch('<?php echo addslashes(base_path('api/api_auth.php')); ?>', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -88,7 +92,7 @@
                 
                 if (data.success) {
                     // Redirigir al login
-                    window.location.href = '/login?verified=1';
+                    window.location.href = '<?php echo addslashes(base_path("index.php?route=login&verified=1")); ?>';
                 } else {
                     document.getElementById('errorMessage').textContent = data.message;
                     document.getElementById('errorMessage').classList.remove('hidden');
@@ -104,7 +108,7 @@
             const email = document.getElementById('email').value;
             
             try {
-                const response = await fetch('/api/api_auth.php', {
+                const response = await fetch('<?php echo addslashes(base_path('api/api_auth.php')); ?>', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

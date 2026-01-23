@@ -3,7 +3,7 @@
 // Función para cerrar sesión
 async function cerrarSesion() {
     try {
-        const response = await fetch('/api/api_auth.php', {
+        const response = await fetch((window.BASE_PATH || '') + '/api/api_auth.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ async function cerrarSesion() {
 
         if (response.ok) {
             // Redirigir al login
-            window.location.href = 'login';
+            window.location.href = (window.BASE_PATH || '') + '/index.php?route=login';
         } else {
             // Mostrar mensaje de error con un toast o notificación
             const errorMessage = data.error || 'Error al cerrar sesión';
@@ -33,7 +33,7 @@ async function cerrarSesion() {
 async function loadStatistics() {
     try {
         console.log('Cargando estadísticas...');
-        const response = await fetch('/api/estadisticas.php');
+        const response = await fetch((window.BASE_PATH || '') + '/api/estadisticas.php');
         const data = await response.json();
         
         if (data.success) {
@@ -154,7 +154,7 @@ function inicializarSidebar() {
 async function verificarRestaurante() {
     try {
         console.log('Iniciando petición a API de restaurantes');
-        const response = await fetch('/api/restaurantes.php?action=check');
+        const response = await fetch((window.BASE_PATH || '') + '/api/restaurantes.php?action=check');
         console.log('Respuesta recibida:', response);
         
         if (!response.ok) {
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     action: 'create'
                 });
                 
-                const response = await fetch('/api/restaurantes.php', {
+                const response = await fetch((window.BASE_PATH || '') + '/api/restaurantes.php', {
                     method: 'POST',
                     body: formData,
                     credentials: 'same-origin'
@@ -354,6 +354,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error detallado:', error);
                 alert('Error al crear el restaurante. Por favor, intenta nuevamente.');
             }
+        });
+    }
+
+    // Fallback: asegurar que la tarjeta de Configuración redirecciona aunque haya un handler que prevenga la navegación
+    const configLink = document.getElementById('configuracionCardLink');
+    if (configLink) {
+        configLink.addEventListener('click', function(e) {
+            // Si algún handler previene la navegación, forzamos la redirección tras un pequeño retraso
+            setTimeout(function() {
+                if (typeof configLink.href === 'string' && configLink.href.trim() !== '') {
+                    window.location.href = configLink.href;
+                }
+            }, 50);
         });
     }
 }); 

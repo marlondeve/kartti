@@ -1,14 +1,21 @@
 // Funciones de utilidad
 const utils = {
-    // Función para hacer peticiones HTTP
+    // Función para hacer peticiones HTTP (base-path aware)
     async fetch(url, options = {}) {
         try {
+            // Normalizar base path si la URL comienza con '/'
+            let requestUrl = url;
+            if (typeof window !== 'undefined' && typeof url === 'string' && url.startsWith('/') && !url.startsWith('//')) {
+                const base = (typeof window.BASE_PATH !== 'undefined' && window.BASE_PATH) ? window.BASE_PATH : (window.location && window.location.pathname ? window.location.pathname.replace(/\/[^"]*\.(php|html|htm)$/, '') : '');
+                requestUrl = (base === '/' ? '' : base) + url;
+            }
+            
             // Si es una petición GET, no incluir body
             if (options.method === 'GET' || !options.method) {
                 delete options.body;
             }
             
-            const response = await fetch(url, options);
+            const response = await fetch(requestUrl, options);
             if (!response.ok) {
                 const error = new Error(`HTTP error! status: ${response.status}`);
                 error.response = response;
@@ -25,6 +32,7 @@ const utils = {
             throw error;
         }
     },
+
 
     // Función para mostrar notificaciones
     showNotification(type, message) {
@@ -96,13 +104,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     if (response && response.success) {
                         utils.showNotification('success', response.message || 'Operación exitosa');
-                        // Redirigir después de un breve delay
+                        // Redirigir después de un breve delay (base-path aware)
                         setTimeout(() => {
+                            let dest = '';
                             if (form.id === 'registroForm') {
-                                window.location.href = `/verificar?email=${encodeURIComponent(data.email)}`;
+                                // Registro -> verificar
+                                if (typeof window !== 'undefined') {
+                                    if (window.USE_PRETTY_URLS) {
+                                        dest = (window.BASE_PATH || '') + '/verificar?email=' + encodeURIComponent(data.email);
+                                    } else {
+                                        dest = (window.BASE_PATH || '') + '/index.php?route=verificar&email=' + encodeURIComponent(data.email);
+                                    }
+                                } else {
+                                    dest = '/verificar?email=' + encodeURIComponent(data.email);
+                                }
                             } else {
-                                window.location.href = response.redirect || '/dashboard';
+                                // Login -> usar redirect del servidor si existe, haciendo base-path aware en caso de rutas absolutas
+                                if (response && response.redirect) {
+                                    if (response.redirect.startsWith('/')) {
+                                        dest = (window.BASE_PATH || '') + response.redirect;
+                                    } else {
+                                        dest = response.redirect;
+                                    }
+                                } else {
+                                    dest = window.USE_PRETTY_URLS ? (window.BASE_PATH || '') + '/dashboard' : (window.BASE_PATH || '') + '/index.php?route=dashboard';
+                                }
                             }
+                            window.location.href = dest;
                         }, 1000);
                     } else {
                         utils.showNotification('error', response?.message || 'Error en la operación');

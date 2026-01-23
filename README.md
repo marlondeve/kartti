@@ -33,6 +33,24 @@ Este script detectará automáticamente el entorno y:
 3. Despliega la configuración de Apache
 4. Accede a la aplicación a través del navegador
 
+## Migraciones de base de datos
+
+Hemos añadido una migración que agrega las columnas necesarias para la nueva vista de configuración (`call_waiter_enabled`, `whatsapp`) en `database/migrations/20260105_add_restaurant_settings.sql`.
+
+Aplica la migración con tu cliente MySQL (por ejemplo, desde la terminal):
+
+```bash
+mysql -u <user> -p <database> < database/migrations/20260105_add_restaurant_settings.sql
+```
+
+Después, actualiza los archivos JSON de `public/json/` para que incluyan los nuevos ajustes (si quieres que la carta los use sin consultar la base de datos). Ejecuta el script PHP de migración de JSON:
+
+```bash
+php database/migrations/20260105_populate_restaurant_json.php
+```
+
+Asegúrate de crear copia de seguridad de tu base de datos y de los archivos `public/json/` antes de aplicar migraciones en producción.
+
 ## Estructura del Proyecto
 
 ```

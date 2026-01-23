@@ -1,8 +1,7 @@
 <?php
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /login');
-    exit;
+    redirect_to('index.php?route=login');
 }
 
 // Obtener datos del usuario de la sesión
@@ -16,6 +15,10 @@ $user_email = $_SESSION['user_email'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de QR - <?php echo APP_NAME; ?></title>
+    <script>
+      window.BASE_PATH = '<?php echo addslashes(base_path('')); ?>';
+      window.USE_PRETTY_URLS = false;
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -135,31 +138,37 @@ $user_email = $_SESSION['user_email'];
                 
                 <ul class="space-y-2 font-medium mt-5">
                     <li>
-                        <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=dashboard'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-home w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Área de Trabajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/menu" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=menu'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-utensils w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Menú</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/qr" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=qr'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700 group">
                             <i class="fas fa-qrcode w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Códigos QR</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/alertas" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=alertas'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-chart-bar w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Alertas</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <a href="<?php echo base_path('index.php?route=analitica'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-chart-line w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
+                            <span class="ml-3">Analítica</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_path('index.php?route=configuracion'); ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <i class="fas fa-cog w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                             <span class="ml-3">Configuración</span>
                         </a>
@@ -268,7 +277,7 @@ $user_email = $_SESSION['user_email'];
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="<?php echo base_path('public/js/script.js'); ?>"></script>
     <script>
         // Inicializar modales solo si los elementos existen
         let qrModal, previewModal, deleteModal;
@@ -486,13 +495,13 @@ $user_email = $_SESSION['user_email'];
 
                                         <!-- Action Icons -->
                                         <div class="mt-4 flex justify-between text-gray-400">
-                                            <a href="${window.location.origin}/carta/?id=${restauranteId}&tipo=${encodeURIComponent(qr.tipo)}&nombre=${encodeURIComponent(qr.nombre)}" target="_blank" class="hover:text-white transition-colors" title="Vista previa">
+                                            <a href="${window.location.origin}${window.BASE_PATH || ''}/carta/?id=${restauranteId}&tipo=${encodeURIComponent(qr.tipo)}&nombre=${encodeURIComponent(qr.nombre)}" target="_blank" class="hover:text-white transition-colors" title="Vista previa">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                                 </svg>
                                             </a>
-                                            <button onclick="copyToClipboard('${window.location.origin}/carta/?id=${restauranteId}&tipo=${encodeURIComponent(qr.tipo)}&nombre=${encodeURIComponent(qr.nombre)}')" class="hover:text-white transition-colors" title="Copiar enlace">
+                                            <button onclick="copyToClipboard('${window.location.origin}${window.BASE_PATH || ''}/carta/?id=${restauranteId}&tipo=${encodeURIComponent(qr.tipo)}&nombre=${encodeURIComponent(qr.nombre)}')" class="hover:text-white transition-colors" title="Copiar enlace">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                                                 </svg>
@@ -578,7 +587,7 @@ $user_email = $_SESSION['user_email'];
                     tipo: tipo.value,
                     nombre: nombre.value
                 });
-                const qrUrl = `${window.location.origin}${qrPath}?${params.toString()}`;
+                const qrUrl = `${window.location.origin}${window.BASE_PATH || ''}${qrPath}?${params.toString()}`;
                 
                 // Validar la URL
                 try {
@@ -644,7 +653,7 @@ $user_email = $_SESSION['user_email'];
 
                 // Crear una imagen que muestre el QR guardado
                 const img = new Image();
-                img.src = `${window.location.origin}/${url}`;
+                img.src = `${window.location.origin}${window.BASE_PATH || ''}/${url.replace(/^\//, '')}`;
                 img.style.width = '96px';
                 img.style.height = '96px';
                 img.style.objectFit = 'contain';
@@ -740,7 +749,8 @@ $user_email = $_SESSION['user_email'];
 
         // Manejar el cierre de sesión
         document.getElementById('confirmLogout').addEventListener('click', function() {
-            window.location.href = '/logout';
+            var r = window.USE_PRETTY_URLS ? (window.BASE_PATH + '/logout') : (window.BASE_PATH + '/index.php?route=logout');
+            window.location.href = r;
         });
 
         function showPreview(qr) {
@@ -751,7 +761,7 @@ $user_email = $_SESSION['user_email'];
         async function downloadQR(imagePath, nombre) {
             try {
                 // Construir la URL completa
-                const fullUrl = `${window.location.origin}/${imagePath}`;
+                const fullUrl = `${window.location.origin}${window.BASE_PATH || ''}/${imagePath.replace(/^\//, '')}`;
                 
                 // Crear un elemento <a> temporal
                 const link = document.createElement('a');
