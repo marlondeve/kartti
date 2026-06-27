@@ -11,7 +11,7 @@
             },
             {
                 "name": "LA BABY DOBLE",
-                "price": "$19,990",
+                "price": "$26,000",
                 "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda.",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915218a3a314_1762992522.jpg",
                 "status": "activo"
@@ -461,5 +461,19 @@
                 "status": "activo"
             }
         ]
+    },
+    "_settings": {
+        "call_waiter_enabled": true,
+        "colors": {
+            "background": "#1A1A1A",
+            "card_background": "#272728",
+            "primary": "#B38D57",
+            "primary_dark": "#80653E",
+            "primary_light": "#E4C57F",
+            "text_primary": "#E4C57F",
+            "text_secondary": "#B38D57",
+            "header_bg": "#272728",
+            "header_text": "#B38D57"
+        }
     }
 }

@@ -1,0 +1,498 @@
+{
+    "FRIOS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Clásico",
+                "price": "$9",
+                "description": "De Garbanzos, Tomate Concasse, Perejil, A.O.V.E",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b14a22112_1776791882.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sucuklu",
+                "price": "$115",
+                "description": "Sucuk a la plancha, mantequilla quemada, pepinillo, rucula.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7be2177492_1776795169.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patlicanli",
+                "price": "$105",
+                "description": "Berenjena asada, tomate deshidratado, pepinillo, salsa tahin.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b331b2bde_1776792369.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cacik",
+                "price": "$9",
+                "description": "Yogur, pepino, eneldo, hierbabuena, ajo, AOVE",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b6fab2de2_1776793338.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Atom",
+                "price": "$8",
+                "description": "Yogur, aceite picante de guindilla, nueces salteados.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bd74479d6_1776794996.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patlicanli",
+                "price": "$95",
+                "description": "Yogur, berenjena asada, nueces, vinagreta de limón y tahini.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b762d90a2_1776793442.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Girit Ezme – Anatolia oeste, Egeo",
+                "price": "$85",
+                "description": "Pate de 3 quesos con Pistacho, emulsión de Hierbas, A.O.V.E.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b7cbcc215_1776793547.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Babaganush – Región Anatolia Sureste",
+                "price": "$85",
+                "description": "Berenjena a la llama, pimiento asado, perejil ,vinagreta de tahini.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b8471db61_1776793671.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Roka Salatasi",
+                "price": "$135",
+                "description": "Rucula, tomate, frutos secos, cebolla morada, queso feta, vinagreta de granada.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7b98f4e13f_1776793999.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Karides Sogus",
+                "price": "$13",
+                "description": "Gambones marinados con salsa de naranja con un toque de picante, rabanito, alcaparras, eneldo.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ba3ab9ef9_1776794170.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Muhammara – Anatolia Sureste, AC 2000",
+                "price": "$9",
+                "description": "Una crema de pimientos asados con nueces, olivas, queso feta.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bd24e793f_1776794916.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Imam Bayildi",
+                "price": "$135",
+                "description": "Berenjenas fritas rellenas con verduras, salsa de yogur y piquillo.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bb7419b7f_1776794484.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Levrek Marin – Anatolia oeste",
+                "price": "$145",
+                "description": "Lubina cruda marinada con vinagreta de cítricos, rábano, alcaparras, kumquat, grosella.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bbe425d28_1776794596.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cig Kofte – Anatolia sureste, AC1000",
+                "price": "$11",
+                "description": "Bulgur fino con piquillo, salsa granada, lechuga, rúcula, limon.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bc86d9530_1776794758.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "CALIENTES": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Patata a la Turca",
+                "price": "$105",
+                "description": "Patata ondulada estilo Mersin, perejil, ajo, limón, pimentón, salsa de tomate y yogur.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bed32eb34_1776795347.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pachanga Borex",
+                "price": "$85",
+                "description": "Rollito de queso provolone con sucuk, tomate, pimiento y muhammara.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bf2f1ecc9_1776795439.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Karides Güveç ",
+                "price": "$16",
+                "description": "Gambones salteados con setas, tomillo y ajo & mantequilla.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7bff382d5c_1776795635.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Levrek Sarma",
+                "price": "$195",
+                "description": "Filete de lubina enrollado con pasta kataifi, vinagreta de kumquat, rúcula, patatas y salsa tarato.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7c1fb530a3_1776796155.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Kuzu Tandir - Imperio Selyucida, Siglo XIII",
+                "price": "$235",
+                "description": "Cordero hecho a baja temperatura, pan pide, bulgur, salsa yogur.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cb8d3d2d6_1776798605.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ninda Kebab Ternera",
+                "price": "$22",
+                "description": "Una brocheta ternera marinada con una mezcla de especias con verduras con acompañamiento de pan durum, ensalada de tomate, hummus, cebolla asada.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cbe17d9f9_1776798689.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ninda Kebab Pollo ",
+                "price": "$18",
+                "description": "Una brocheta pollo marinado con una mezcla de especias con verduras con acompañamiento de pan durum, ensalada de tomate, hummus, cebolla asada.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cc2f02a9c_1776798767.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Mahmudiye",
+                "price": "$185",
+                "description": "Contramuslo de pollo salteado con verduras, miel,menta, almendras, uvas pasas.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cc7d6ce64_1776798845.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hunkar Begendi - Imperio Ottomano, Siglox XIX",
+                "price": "$225",
+                "description": "Ternera baja temperatura con salsa de piquillo, berenjena ahumada, almendras tostadas.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cd12560df_1776798994.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Beyti Kebab",
+                "price": "$215",
+                "description": "200gr de costilla de ternera picada y enrollada en pan lavash. Salsa de tomate, yogur, bulgur, verduras asadas",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ce5ab371b_1776799322.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pan + Salsa",
+                "price": "$35",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "BEBIDAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Agua",
+                "price": "$2",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d002523b6_1776799746.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Agua Con Gas",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d1473ead8_1776800071.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Refrecos",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d22d01164_1776800301.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ayran",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d26a1d749_1776800362.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Limonata",
+                "price": "$3",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d29ef0e66_1776800414.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Aguila Barril ",
+                "price": "$25",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "1906",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ee9ce88d9_1776807580.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Estrella Galacia",
+                "price": "$3",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7eedd969f0_1776807645.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Alhambra Verde Reserva",
+                "price": "$3",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ef25b9419_1776807717.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Amstel 00",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ef5c0d481_1776807772.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Amstel Radler",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ef8db5489_1776807821.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cruszcampo Sin Gluten",
+                "price": "$4",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7efd38419a_1776807891.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Yeni Raki Doble",
+                "price": "$75",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f0242d5bc_1776807972.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Beylerbeyi Doble",
+                "price": "$95",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f1345024a_1776808244.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Yeni Raki 35CL",
+                "price": "$30",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f0b84daa2_1776808120.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Yeni Raki 70CL",
+                "price": "$55",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f0e2bf98a_1776808162.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Beylerbeyi 35CL",
+                "price": "$45",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f1d26aa8f_1776808402.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Beylerbeyi 70CL",
+                "price": "$85",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f22598b44_1776808485.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Café Turco",
+                "price": "$35",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f29b52edd_1776808603.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cafe Solo",
+                "price": "$15",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f3573db67_1776808791.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cafe Cortado",
+                "price": "$2",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f3b67f2f1_1776808886.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cafe con Leche",
+                "price": "$25",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f4a4e729d_1776809124.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cafe Bombon",
+                "price": "$2",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f5cac8d13_1776809418.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Infusiones",
+                "price": "$15",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "VINOS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Rebellia",
+                "price": "$15",
+                "description": "Tempranillo, Garnacha. D.O Utiel Requena\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fdec90547_1776811500.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pica Zabal",
+                "price": "$22",
+                "description": "Graciano. D.O Rioja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fd2b35783_1776811307.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pasaeli",
+                "price": "$245",
+                "description": "Turquia. D.O Utiel Requena",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Valtravieso Crianza",
+                "price": "$315",
+                "description": "Tinto Fino. D.O Ribera Del Duero",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fec1e9dc7_1776811713.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Bilogia Crianza",
+                "price": "$20",
+                "description": "Monastrell, Syrah. D.O Valencia",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ff3d303b4_1776811837.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gomez Cruzado Crianza",
+                "price": "$195",
+                "description": "Tempranillo, Garnacha. D.O Rioja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ffbae47b2_1776811962.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Caprasia",
+                "price": "$245",
+                "description": "Bobal. D.O Utiel Requena\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8001c37fdb_1776812060.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pago Florentino",
+                "price": "$225",
+                "description": "Cencibel. Castilla la Mancha\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e800606d4d1_1776812128.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Rebellia",
+                "price": "$15",
+                "description": "Chardonnay, Sauvignon Blanco. D.O Utiel Requena",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e800ebd89ad_1776812267.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Valtravieso Nogara",
+                "price": "$22",
+                "description": "Verdejo. D.O Rueda\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e801493d708_1776812361.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pasaeli",
+                "price": "$245",
+                "description": "Sidalan. Turquia",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e801a3878cb_1776812451.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Mayor de Mendoza",
+                "price": "$26",
+                "description": "Albariño. D.O Rías Baixas\r\n\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e802256ca31_1776812581.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Mil Rios",
+                "price": "$235",
+                "description": "Godello. D.O Valdeorras\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80276249e9_1776812662.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Losada",
+                "price": "$275",
+                "description": "Godello. D.O Bierzo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e802d81c3b5_1776812760.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ramon do Casar",
+                "price": "$245",
+                "description": "Treixadura. D.O Ribeiro\r\n\r\n",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e803460f7c9_1776812870.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Casal de Arman 7 Cupos",
+                "price": "$20",
+                "description": "Treixadura. D.O Ribeiro",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e803b3477f9_1776812979.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ilagares",
+                "price": "$155",
+                "description": "Garnacha. D.O Navarra",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8055353232_1776813395.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "_settings": {
+        "call_waiter_enabled": true,
+        "colors": {
+            "background": "#0C1A1E",
+            "card_background": "#163038",
+            "primary": "#5ED3E6",
+            "primary_dark": "#5ED3E6",
+            "primary_light": "#163038",
+            "text_primary": "#5ED3E6",
+            "text_secondary": "#5ED3E6",
+            "header_bg": "#163038",
+            "header_text": "#5ED3E6"
+        }
+    }
+}

@@ -1,13 +1,20 @@
 {
-    "HAMBURGUESA": {
+    "BURGERS": {
         "status": "activo",
         "products": [
             {
                 "name": "LA BÁSICA DE ESTOS",
-                "price": "$19,990",
+                "price": "$21,990",
                 "description": "Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, un explosivo chutney casero mixto (morrón y cebolla), y un toque fresco de lechuga y tomate. ",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df32732164_1763570471.png",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/697d3172f3560_1769812338.webp",
                 "status": "activo"
+            },
+            {
+                "name": "LA BABY DOBLE",
+                "price": "$26,000",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69f008cc45f39_1777338572.webp",
+                "status": "inactivo"
             },
             {
                 "name": "1\/4 DE LIBRA BACON",
@@ -32,14 +39,14 @@
             },
             {
                 "name": "PERUANA",
-                "price": "$24,000",
+                "price": "$26,000",
                 "description": "Un tributo a los sabores andinos con un toque gourmet. Una jugosa carne de autor (125 g), crujiente tocino ahumado, fascinantes cebollas en pluma al estilo del chef, el irresistible. crunch del maiz tostado, y un cremoso queso fundido, el toque fresco de la lechuga y tomate, todo abrazado por un suave pan artesanal. ¡Un viaje de sabores en cada bocado!",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df421bd337_1763570721.png",
                 "status": "activo"
             },
             {
                 "name": "SEPTIEMBRE",
-                "price": "$24,990",
+                "price": "$26,000",
                 "description": "Una creación de temporada que redefine la perfección y llegó para quedarse. Pan artesanal, nuestra exclusiva carne de autor 125gr, un cremoso queso mozzarella, el dulzor sublime de un meloso de pera, el contraste salado del queso costeño, nuestro tocino ahumado, y un toque fresco de lechuga y tomate. ¡Sabores que conquistan!",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df448315ce_1763570760.png",
                 "status": "activo"
@@ -53,12 +60,31 @@
             }
         ]
     },
+    "BURGERS CLÁSICAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "HB Clásica sencilla",
+                "price": "$21,900",
+                "description": "Un clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, tocineta,  y un toque fresco de lechuga, tomate y cebolla cruda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a08b3bf2b9e2_1778955199.webp",
+                "status": "activo"
+            },
+            {
+                "name": "HB Clásica doble",
+                "price": "$26,000",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda. ¡Para los que quieren todo y más!",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a08b3fc6c37a_1778955260.webp",
+                "status": "activo"
+            }
+        ]
+    },
     "ADICIONES": {
         "status": "activo",
         "products": [
             {
                 "name": "Papa francesa",
-                "price": "$4,000",
+                "price": "$6,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df4a041b6b_1763570848.webp",
                 "status": "activo"
@@ -133,21 +159,21 @@
         "products": [
             {
                 "name": "COMBO 1",
-                "price": "$39,900",
+                "price": "$42,000",
                 "description": "Burger 1\/2 libra bacon + milk shake (tú eliges el sabor)",
                 "image": "",
                 "status": "activo"
             },
             {
                 "name": "COMBO 2",
-                "price": "$33,900",
+                "price": "$36,000",
                 "description": "Burger 1\/4 libra bacon + milk shake (tú eliges el sabor)",
                 "image": "",
                 "status": "activo"
             }
         ]
     },
-    "Milk shaker": {
+    "Malteada": {
         "status": "activo",
         "products": [
             {
@@ -218,7 +244,7 @@
             },
             {
                 "name": "Agua Brisa 600 ml",
-                "price": "$3,000",
+                "price": "$4,500",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df6b571270_1763571381.png",
                 "status": "activo"
@@ -256,7 +282,7 @@
                 "price": "$10,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df72129501_1763571489.jpg",
-                "status": "inactivo"
+                "status": "activo"
             },
             {
                 "name": "Kola Roman Pet 500",
@@ -270,7 +296,7 @@
                 "price": "$10,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df7779cf1e_1763571575.png",
-                "status": "inactivo"
+                "status": "activo"
             },
             {
                 "name": "COCA COLA 400ML",
@@ -280,25 +306,18 @@
                 "status": "activo"
             },
             {
+                "name": "COCA COLA 1.5",
+                "price": "$10,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df7b14874a_1763571633.png",
+                "status": "activo"
+            },
+            {
                 "name": "Coca cola Zero",
                 "price": "$5,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f572659196_1763661606.jpeg",
                 "status": "activo"
-            },
-            {
-                "name": "COCA COLA 1.5",
-                "price": "$10,000",
-                "description": "",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691df7b14874a_1763571633.png",
-                "status": "inactivo"
-            },
-            {
-                "name": "Coronita ",
-                "price": "$6,000",
-                "description": "",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5710991db_1763661584.jpeg",
-                "status": "inactivo"
             }
         ]
     },
@@ -388,5 +407,19 @@
                 "status": "activo"
             }
         ]
+    },
+    "_settings": {
+        "call_waiter_enabled": false,
+        "colors": {
+            "background": "#1A1A1A",
+            "card_background": "#272728",
+            "primary": "#B38D57",
+            "primary_dark": "#80653E",
+            "primary_light": "#E4C57F",
+            "text_primary": "#E4C57F",
+            "text_secondary": "#B38D57",
+            "header_bg": "#272728",
+            "header_text": "#B38D57"
+        }
     }
 }

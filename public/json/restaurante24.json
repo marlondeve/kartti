@@ -1,0 +1,265 @@
+{
+    "Picoteo": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Papas",
+                "price": "$2",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82c88689cf_1776823432.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pincho de queso con cecina",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82ca9a91b4_1776823465.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gilda de anchoa",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82cd15700d_1776823505.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Papas + gilda de anchoa",
+                "price": "$550",
+                "description": "2 Gildas de anchoa y papas",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82cfc34a62_1776823548.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Papas pimentón",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82d3f7eaac_1776823615.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Papas pimienta negra",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82d60941c4_1776823648.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Entrantes": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Patatas con carne madurada ",
+                "price": "$950",
+                "description": "Patatas con doble fritura, queso cheddar fundido, carne madurada, cebolla morada y BBQ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82dd001709_1776823760.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ignacios con carne madurada",
+                "price": "$1,050",
+                "description": "Ignacios con carne madurada, queso cheddar, totopos caseros, guacamole, pico de gallo y jalapeños",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82e190055f_1776823833.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patatas fritas",
+                "price": "$4",
+                "description": "Patatas fritas caseras con doble fritura, lo sencillo mola mas!",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82e50e916a_1776823888.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patatas de Boniato",
+                "price": "$5",
+                "description": "Muy ricas",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82e7393ffe_1776823923.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Mazorcas con queso parmesano",
+                "price": "$550",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82e9b51624_1776823963.webp",
+                "status": "activo"
+            },
+            {
+                "name": "¡NUEVO! Pollo Japo JP con Patatas",
+                "price": "$1,450",
+                "description": "Pollo Japo JP con patatas doble fritura, queso cheddar líquido, salsa cheeseburger, cebollino y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82ef65c34c_1776824054.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Burgers": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Antiga Burger",
+                "price": "$10",
+                "description": "Pan Brioche de mantequilla, carne madurada, queso cheddar, cebolla morada, pepinillos encurtidos y salsa antiga",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e831677413a_1776824679.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Doble Cheeseburger",
+                "price": "$14",
+                "description": "Pan Brioche de mantequilla, 2X carne madurada, queso cheddar, pepinillos encurtidos y salsa antiga",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e831b1c3650_1776824753.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Bacon Cheese",
+                "price": "$1,050",
+                "description": "Pan brioche de mantequilla, carne madurada, bacon, queso cheddar, pepinillos encurtidos y salsa antiga",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e831f9d6534_1776824825.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Texas Burger",
+                "price": "$1,050",
+                "description": "Pan brioche de mantequilla, carne madurada, queso cheddar, 2x bacon, cebolla roja, pepinillos encurtidos y BBQ texas ligeramente ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8326f64ddc_1776824943.webp",
+                "status": "activo"
+            },
+            {
+                "name": "All in trufa",
+                "price": "$1,250",
+                "description": "Carne madurada (180gr.) Queso cheddar y salsa de trufa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e832c8a3840_1776825032.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Smokey",
+                "price": "$1,250",
+                "description": "Pan brioche de mantequilla, carne madurada, bacon ahumado, queso cheddar y gouda, cebolla morada, pepinillos encurtidos y mayo smokey",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8330ea80f4_1776825102.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sancho panza",
+                "price": "$14",
+                "description": "Pan brioche de mantequilla, carne madurada, cecina de león, queso machego semicurado y emulsión ahumada",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e83353909ab_1776825171.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo burger",
+                "price": "$1,150",
+                "description": "Pan brioche de mantequilla, pollo burger con queso cheddar derretido y ensalada de col americana ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e833a56dd60_1776825253.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Elemmy Burger",
+                "price": "$1,350",
+                "description": "Pan brioche, nuestra salsa emmy casera, burger 180, pepinillos, queso gouda, bacon bites con cebolla caramelizada",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e833f9b99bf_1776825337.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Veggie": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Ignacios vegan",
+                "price": "$1,050",
+                "description": "Totopos caseros, guacamole y pico de gallo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8345a75767_1776825434.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patatas de Boniato",
+                "price": "$5",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8347ce5f00_1776825468.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Veggie Burger",
+                "price": "$1,250",
+                "description": "Beyond burger, tomate, cebolla morada, queso cheddar, fast pickles, mayo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e834b7971c0_1776825527.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Patatas fritas ",
+                "price": "$4",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e834e81fafa_1776825576.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Texas veggie burger",
+                "price": "$1,350",
+                "description": "Beyond burger, pico de gallo, guacamole, queso gouda y ensalada de col americana",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e835218348e_1776825633.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo veggie",
+                "price": "$1,250",
+                "description": "Pollo veggie, tomate, cebolla morada, queso cheddar, pepinillos y lechuga",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8355776894_1776825687.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Postres": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "American cheesecakes",
+                "price": "$550",
+                "description": "Los clásicos nunca mueren",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8359bc78d1_1776825755.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cheesecake nutella & oreo",
+                "price": "$550",
+                "description": "Cheesecake nutella & oreo para los amantes de la nutella y el oreo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e835cf5e184_1776825807.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cheesecake lotus",
+                "price": "$550",
+                "description": "Lotus como forma de vida",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e835f0384b4_1776825840.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nutella & chocolate jungly ",
+                "price": "$550",
+                "description": "Los sabores de toda la vida... nutella & chocolate jungly",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8362105b5d_1776825889.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Dulce de leche & galleta maria ",
+                "price": "$550",
+                "description": "Nada más que decir... Dulce de leche y galleta maria",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8365012eb4_1776825936.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "_settings": {
+        "call_waiter_enabled": true,
+        "colors": {
+            "background": "#190F33",
+            "card_background": "#060828",
+            "primary": "#B38D57",
+            "primary_dark": "#80653E",
+            "primary_light": "#C9A95E",
+            "text_primary": "#ECBC4B",
+            "text_secondary": "#B38D57",
+            "header_bg": "#070736",
+            "header_text": "#B38D57"
+        }
+    }
+}

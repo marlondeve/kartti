@@ -241,7 +241,7 @@ async function inicializarMenu() {
 
             // Inicializar slider después de generar la primera página
             // Usar un timeout más largo para asegurar que el DOM esté completamente renderizado
-            setTimeout(() => {
+            /**setTimeout(() => {
                 // Recalcular altura de las cards con las dimensiones finales
                 if (typeof generateCardsForCategory === 'function') {
                     // Forzar recálculo de alturas después de que todo esté renderizado
@@ -283,7 +283,7 @@ async function inicializarMenu() {
                 } else if (typeof initializeSlider === 'function') {
                     initializeSlider();
                 }
-            }, 150);
+            }, 150);**/
         }
     } catch (error) {
         console.error('Error al inicializar el menú:', error);
@@ -717,15 +717,16 @@ function updateRestaurantTitle() {
                 restaurantName = "Estosburgers";
             }else if(restauranteId == "17"){
                 restaurantName = "Estosburgers";
-            }else if(restauranteId == "18"){
-                restaurantName = "Estosburgers";
             }
             
             // Establecer el nombre del restaurante como título principal
             titleElement.textContent = restaurantName;
             
-            // Establecer el nombre del QR debajo en texto pequeño
-            if (qrNombre) {
+            // Mostrar el nombre del QR solo si este QR tiene "vista nombre" activo (mostrar_nombre_en_carta en el JSON del QR)
+            const mostrarNombreQR = qrEncontrado.mostrar_nombre_en_carta !== 0 && 
+                qrEncontrado.mostrar_nombre_en_carta !== false && 
+                qrEncontrado.mostrar_nombre_en_carta !== 'inactivo';
+            if (qrNombre && mostrarNombreQR) {
                 let qrName = capitalizeFirstLetter(qrNombre);
                 if(restauranteId == "14"){
                     qrName = "Montelibano";
@@ -735,8 +736,10 @@ function updateRestaurantTitle() {
                     qrName = "Caucasia";
                 }
                 qrTitleElement.textContent = qrName;
+                if (qrTitleElement.style) qrTitleElement.style.display = '';
             } else {
                 qrTitleElement.textContent = '';
+                if (qrTitleElement.style) qrTitleElement.style.display = 'none';
             }
         })
         .catch(error => {

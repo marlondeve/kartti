@@ -1,0 +1,14 @@
+{
+    "qrs": [
+        {
+            "id": 127,
+            "nombre": "Antiga Burger",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/AntigaBurger_69e836681908e.png",
+            "created_at": "2026-04-22 02:46:00",
+            "restaurante_nombre": "ANTIGA cervezas, burgers",
+            "mostrar_nombre_en_carta": 1
+        }
+    ]
+}

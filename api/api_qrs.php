@@ -41,14 +41,14 @@ function getUserRestaurant($userId) {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-// Función para actualizar el JSON de QRs
+// Función para actualizar el JSON de QRs (mostrar_nombre_en_carta se guarda solo en el JSON, no en la tabla)
 function actualizarJsonQRs($restaurante_id) {
     global $pdo;
     
     try {
         error_log("Actualizando JSON de QRs para restaurante: " . $restaurante_id);
         
-        // Obtener todos los QRs del restaurante usando la relación correcta
+        // Obtener todos los QRs del restaurante desde la BD (sin mostrar_nombre_en_carta)
         $stmt = $pdo->prepare("
             SELECT q.id, q.nombre, q.tipo, q.estado, q.imagen, q.created_at, r.nombre as restaurante_nombre
             FROM qr_codes q
@@ -58,10 +58,23 @@ function actualizarJsonQRs($restaurante_id) {
         $stmt->execute([$restaurante_id]);
         $qrs = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        error_log("QRs encontrados: " . json_encode($qrs));
+        $dirPath = __DIR__ . '/../public/json';
+        $jsonPath = $dirPath . '/qr' . $restaurante_id . '.json';
+        $mostrarNombreMap = [];
+        if (file_exists($jsonPath)) {
+            $existing = json_decode(file_get_contents($jsonPath), true);
+            if (!empty($existing['qrs']) && is_array($existing['qrs'])) {
+                foreach ($existing['qrs'] as $eq) {
+                    $eid = isset($eq['id']) ? $eq['id'] : null;
+                    if ($eid !== null) {
+                        $mostrarNombreMap[$eid] = (int)(isset($eq['mostrar_nombre_en_carta']) ? $eq['mostrar_nombre_en_carta'] : 1);
+                    }
+                }
+            }
+        }
         
-        // Formatear los QRs según la estructura requerida
-        $qrsFormateados = array_map(function($qr) {
+        // Formatear los QRs: datos de BD + mostrar_nombre_en_carta desde el JSON existente (o 1 por defecto)
+        $qrsFormateados = array_map(function($qr) use ($mostrarNombreMap) {
             return [
                 "id" => $qr['id'],
                 "nombre" => $qr['nombre'],
@@ -69,19 +82,18 @@ function actualizarJsonQRs($restaurante_id) {
                 "estado" => $qr['estado'] ?: 'activo',
                 "imagen" => $qr['imagen'],
                 "created_at" => $qr['created_at'],
-                "restaurante_nombre" => $qr['restaurante_nombre']
+                "restaurante_nombre" => $qr['restaurante_nombre'],
+                "mostrar_nombre_en_carta" => isset($mostrarNombreMap[$qr['id']]) ? $mostrarNombreMap[$qr['id']] : 1
             ];
         }, $qrs);
         
-        // Crear el directorio si no existe
-        $dirPath = $_SERVER['DOCUMENT_ROOT'] . '/public/json';
         if (!file_exists($dirPath)) {
             if (!mkdir($dirPath, 0777, true)) {
                 throw new Exception('No se pudo crear el directorio para el JSON');
             }
         }
         
-        // Guardar el JSON
+        // Guardar el JSON (qr7.json, qr10.json, etc.) con mostrar_nombre_en_carta actualizado
         $jsonPath = $dirPath . '/qr' . $restaurante_id . '.json';
         $jsonContent = json_encode(['qrs' => $qrsFormateados], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         
@@ -134,16 +146,28 @@ try {
 
     switch ($method) {
         case 'GET':
-            // Listar QR
             $stmt = $pdo->prepare("SELECT * FROM qr_codes WHERE user_id = ? ORDER BY created_at DESC");
             $stmt->execute([$_SESSION['user_id']]);
-            $qr_codes = $stmt->fetchAll();
-            
-            error_log("API QR - GET - QR encontrados: " . count($qr_codes));
-            
+            $qr_codes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $mostrarNombreMap = [];
+            $jsonPath = __DIR__ . '/../public/json/qr' . $restauranteId . '.json';
+            if (file_exists($jsonPath)) {
+                $data = json_decode(file_get_contents($jsonPath), true);
+                if (!empty($data['qrs']) && is_array($data['qrs'])) {
+                    foreach ($data['qrs'] as $eq) {
+                        if (isset($eq['id'])) {
+                            $mostrarNombreMap[(int)$eq['id']] = (int)(isset($eq['mostrar_nombre_en_carta']) ? $eq['mostrar_nombre_en_carta'] : 1);
+                        }
+                    }
+                }
+            }
+            foreach ($qr_codes as &$q) {
+                $q['mostrar_nombre_en_carta'] = isset($mostrarNombreMap[(int)$q['id']]) ? $mostrarNombreMap[(int)$q['id']] : 1;
+            }
+            unset($q);
             echo json_encode([
                 'success' => true,
-                'data' => $qr_codes ?: [] // Asegurar que siempre sea un array
+                'data' => $qr_codes ?: []
             ]);
             break;
 
@@ -259,9 +283,9 @@ try {
                     break;
 
                 case 'update':
-                    // Actualizar QR
                     $id = $_POST['id'] ?? null;
-                    $estado = $_POST['estado'] ?? null;
+                    $estado = isset($_POST['estado']) ? $_POST['estado'] : null;
+                    $mostrarNombreEnCarta = isset($_POST['mostrar_nombre_en_carta']) ? $_POST['mostrar_nombre_en_carta'] : null;
 
                     error_log("API QR - UPDATE - Datos recibidos: " . json_encode($_POST));
 
@@ -269,46 +293,47 @@ try {
                         throw new Exception('ID del QR no proporcionado');
                     }
 
-                    // Verificar que el QR pertenece al usuario
                     $stmt = $pdo->prepare("SELECT id, nombre, url, tipo FROM qr_codes WHERE id = ? AND user_id = ?");
                     $stmt->execute([$id, $_SESSION['user_id']]);
                     $qr = $stmt->fetch();
-                    
                     if (!$qr) {
                         throw new Exception('QR no encontrado o no autorizado');
                     }
 
-                    // Construir la consulta SQL dinámicamente
-                    $updates = [];
-                    $params = [];
+                    $valorMostrarNombre = ($mostrarNombreEnCarta === true || $mostrarNombreEnCarta === '1' || $mostrarNombreEnCarta === 1) ? 1 : 0;
 
-                    if ($estado !== null) {
-                        $updates[] = "estado = ?";
-                        $params[] = $estado === 'activo' ? 'activo' : 'inactivo';
-                    } else {
-                        $updates[] = "estado = 'inactivo'";
+                    // mostrar_nombre_en_carta se guarda solo en el JSON (no en la tabla)
+                    if ($mostrarNombreEnCarta !== null) {
+                        actualizarJsonQRs($restauranteId);
+                        $dirPath = __DIR__ . '/../public/json';
+                        $jsonPath = $dirPath . '/qr' . $restauranteId . '.json';
+                        $data = json_decode(file_get_contents($jsonPath), true);
+                        if (empty($data['qrs']) || !is_array($data['qrs'])) {
+                            throw new Exception('El archivo JSON del restaurante no tiene datos de QRs');
+                        }
+                        foreach ($data['qrs'] as &$item) {
+                            if (isset($item['id']) && (int)$item['id'] === (int)$id) {
+                                $item['mostrar_nombre_en_carta'] = $valorMostrarNombre;
+                                break;
+                            }
+                        }
+                        if (file_put_contents($jsonPath, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) === false) {
+                            throw new Exception('No se pudo actualizar el archivo JSON del QR');
+                        }
+                        error_log("API QR - JSON actualizado mostrar_nombre_en_carta para QR " . $id);
                     }
 
-                    if (empty($updates)) {
+                    // Estado sí se actualiza en la BD
+                    if ($estado !== null) {
+                        $updates = ["estado = ?"];
+                        $params = [$estado === 'activo' ? 'activo' : 'inactivo', $id];
+                        $stmt = $pdo->prepare("UPDATE qr_codes SET " . implode(", ", $updates) . " WHERE id = ?");
+                        $stmt->execute($params);
+                        updateQRRegistry('update', ['id' => $id, 'restaurante_id' => $restauranteId]);
+                    } elseif ($mostrarNombreEnCarta === null) {
                         throw new Exception('No se proporcionaron campos para actualizar');
                     }
 
-                    // Agregar el ID al final de los parámetros
-                    $params[] = $id;
-
-                    $sql = "UPDATE qr_codes SET " . implode(", ", $updates) . " WHERE id = ?";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute($params);
-
-                    error_log("API QR - UPDATE - QR actualizado: " . $id);
-
-                    // Actualizar el registro de QRs usando el ID del restaurante correcto
-                    updateQRRegistry('update', [
-                        'id' => $id,
-                        'restaurante_id' => $restauranteId
-                    ]);
-
-                    // Obtener los datos actualizados
                     $stmt = $pdo->prepare("SELECT * FROM qr_codes WHERE id = ?");
                     $stmt->execute([$id]);
                     $updatedQR = $stmt->fetch();

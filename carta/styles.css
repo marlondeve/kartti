@@ -190,3 +190,45 @@ body {
     max-height: 60px;
 }
 
+/* Pantallas con poca altura (< 600px): compactar header, nav y bottom para que las cards quepan */
+@media (max-height: 600px) {
+    #mainContainer .grid {
+        row-gap: 4px;
+    }
+    .carta-body .carta-header {
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+    }
+    .carta-body .carta-header #restaurantTitle {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+    .carta-body .carta-header #qrTitle {
+        margin-top: 0;
+        font-size: 0.7rem;
+    }
+    .carta-body nav {
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+    }
+    .carta-body .carta-bottom {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .carta-body .carta-main {
+        padding-top: 0.5rem;
+        padding-bottom: 4rem;
+    }
+    .product-card .absolute.bottom-0 {
+        min-height: 32px;
+        max-height: 48px;
+    }
+    .product-card .absolute.bottom-0 .product-name {
+        -webkit-line-clamp: 1;
+        font-size: 0.75rem;
+    }
+    #dotsContainer{
+        display: none;
+    }
+}
+

@@ -1,0 +1,1438 @@
+{
+    "Entrantes": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Edamame",
+                "price": "$359",
+                "description": "Habas Japonesa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a730635b1_1776789296.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Wakame",
+                "price": "$395",
+                "description": "Alga Japonesa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a79063eea_1776789392.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sopa miso",
+                "price": "$365",
+                "description": "Alga con tofu",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a7f78a76e_1776789495.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Kimchi",
+                "price": "$395",
+                "description": "Col China, Marinado con picante",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a8ac802f2_1776789676.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pato crujiente",
+                "price": "$859",
+                "description": "Pato rebozado ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a93b4c86e_1776789819.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gyoza cerdo (4u)",
+                "price": "$459",
+                "description": "Pasta de harina con carne de cerdo y verduras ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7a9a26ee40_1776789922.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gyoza pollo (4u)",
+                "price": "$459",
+                "description": "Pasta de harina con carne de pollo y verduras",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80d63796a8_1776815459.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gyoza beni (4u)",
+                "price": "$495",
+                "description": "Pasta de harina con carne de cerno y verduras ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80e12cc4a6_1776815634.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Epi tempura (2u)",
+                "price": "$595",
+                "description": "Langostino crujiente",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7aa85c5aab_1776790149.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Takoyaki (4u)",
+                "price": "$495",
+                "description": "Croqueta Japonesa con Pulpo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7aadfcf8f9_1776790239.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tira de pollo",
+                "price": "$595",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80e64c46cb_1776815716.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Brava",
+                "price": "$495",
+                "description": "Patatas cuadriculada Frita",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80e81ea909_1776815745.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tempura vegetal",
+                "price": "$595",
+                "description": "Verdura variada",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80eba60067_1776815802.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Calamar",
+                "price": "$595",
+                "description": "Aros de calamar",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80eff8843f_1776815871.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Rollito vegetal (4u)",
+                "price": "$459",
+                "description": "Pasta de arroz con verdura",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8111eaa326_1776816414.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Crispy chicken",
+                "price": "$655",
+                "description": "Pollo con pan rallado, salsa agridulce",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ad2b2308d_1776790827.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Alitas de pollo (4u)",
+                "price": "$655",
+                "description": "Alitas de pollo, salsa agridulce",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8115c0cb5c_1776816476.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Karage (5u)",
+                "price": "$595",
+                "description": "Trozo de pollo frito, salsa agridulce",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8122a56411_1776816682.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pan bao pato (1u)",
+                "price": "$455",
+                "description": "Pan japonés, pato, lechuga, salsa de pato",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e812a1a49e4_1776816801.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pan bao pollo (1u)",
+                "price": "$455",
+                "description": "Pan japonés, pollo, lechuga, salsa de teriyaki",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e812d90c7f5_1776816857.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Siumai (4u)",
+                "price": "$455",
+                "description": "Pasta de harina con carne de cerdo y verduras ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e812f929a6b_1776816889.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Baozi (4u)",
+                "price": "$501",
+                "description": "Pasta de harina con carne de cerdo y verduras ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7aeabe5292_1776791211.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Arroz blanco",
+                "price": "$185",
+                "description": "Arroz Jazmin",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81363669c9_1776816995.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Arroz vinagrado",
+                "price": "$225",
+                "description": "Arroz blanco con un toque de vinagreta japonesa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e813918d80b_1776817041.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Plancha": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Brocheta Chicken (2u)",
+                "price": "$559",
+                "description": "Pincho de pollo con teriyaki ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e813f11d4e4_1776817137.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Brocheta Ebi (2u)",
+                "price": "$559",
+                "description": "Pincho de langostino con teriyaki",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e814ba13e39_1776817338.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo Yakitori",
+                "price": "$695",
+                "description": "Trozo de pollo con salsa yakitori",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8151073628_1776817424.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salmón plancha",
+                "price": "$795",
+                "description": "Salmón con salsa yakiniku",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81575be4d8_1776817525.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Atún plancha",
+                "price": "$895",
+                "description": "Atún con salsa yakiniku",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e816513068a_1776817745.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Almeja plancha",
+                "price": "$695",
+                "description": "Almeja con salsa perejil y ajo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8168a6dfe4_1776817802.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gambones plancha (4u)",
+                "price": "$695",
+                "description": "Gambones con salsa perejil y ajo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e816ab140cb_1776817835.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Urumaki classic (4u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Urumaki Salmón",
+                "price": "$395",
+                "description": "Salmón, aguacate, cubierto de sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e811a93fae1_1776816553.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki ebi",
+                "price": "$395",
+                "description": "Langostino, aguacate, cubierto con sésamo y salsa teriyaki",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81204cc67b_1776816644.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki atún",
+                "price": "$425",
+                "description": "Atún, aguacate, cubierto con sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8128832603_1776816776.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki chicken",
+                "price": "$395",
+                "description": "Pollo, aguacate cubierto con sésamo y salsa teriyaki ",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e812ce79a66_1776816846.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki rúcula",
+                "price": "$395",
+                "description": "Crema de queso, aguacate, pepino, cubierto con hoja rukula",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e814b3b7376_1776817331.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Filadelfia",
+                "price": "$395",
+                "description": "Salmón, crema de queso, aguacate, cubierto con sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8153e355f2_1776817470.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Crab",
+                "price": "$395",
+                "description": "Cangrejo, aguacate, cubierto con sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81564cf6f8_1776817508.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Tobico",
+                "price": "$425",
+                "description": "Salmón, aguacate, cubierto con tobico",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e815ab03b08_1776817579.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Futomaki cocido",
+                "price": "$425",
+                "description": "Pepino, aguacate, langostino, salmón, salsa teriyaki",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e815db731a1_1776817627.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki México",
+                "price": "$425",
+                "description": "Langostino, aguacate, queso, topping doritos",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8163fbe708_1776817727.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Unagi",
+                "price": "$425",
+                "description": "Unagi, aguacate, crema queso, cubierto con sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8167939878_1776817785.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki tempurizado",
+                "price": "$425",
+                "description": "Salmón, aguacate, rebozado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e816d4d2433_1776817876.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni hoja roja",
+                "price": "$465",
+                "description": "Salmón, arroz, nori soja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81737130ce_1776817975.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni hoja amarillo",
+                "price": "$465",
+                "description": "Huevo, arroz, nori soja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e818439a502_1776818243.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni hoja verde",
+                "price": "$465",
+                "description": "Aguacate, arroz, nori soja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e817e8683f0_1776818152.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Urumaki Beni (4u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Urumaki Beni Salmón",
+                "price": "$495",
+                "description": "Salmón, aguacate con topping salmón, salsa beni, salsa teriyaki flambeado y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819599f57f_1776818521.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Atún",
+                "price": "$525",
+                "description": "Atún, aguacate con topping salmón, salsa spicy, salsa unagi y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819985c740_1776818584.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Ebi",
+                "price": "$495",
+                "description": "Langostino, aguacate con topping salmón, salsa spicy, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819ef5053b_1776818671.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Chicken",
+                "price": "$495",
+                "description": "Pollo, aguacate con topping salsa trufa, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81a24a8544_1776818724.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Crab",
+                "price": "$495",
+                "description": "Langostino, aguacate, crema queso, topping cancrejo, salsa unagi y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81b3b3e88f_1776819003.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Aguacate",
+                "price": "$495",
+                "description": "Langostino, aguacate, crema queso topping aguacate crema trufa y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81baeaba88_1776819118.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni tataki",
+                "price": "$495",
+                "description": "Salmón, aguacate, topping salmón, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81be4f1bce_1776819172.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Tropical",
+                "price": "$495",
+                "description": "Langostino, aguacate, crema queso, topping mango, salsa mango y tobico",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81c2860986_1776819240.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Dragón",
+                "price": "$495",
+                "description": "Langostino, aguacate, crema queso, topping salmón, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81c9fc9c43_1776819359.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Unagi",
+                "price": "$525",
+                "description": "Langostino, aguacate, crema queso, topping angila, salsa unagi y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81d0f4ee0a_1776819471.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Cruch",
+                "price": "$495",
+                "description": "Salmón, aguacate, salsa mango, salsa teriyaki, topping cebolla crujiente",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81d3d6c828_1776819517.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Rainbow",
+                "price": "$495",
+                "description": "Salmón, aguacate, topping pescado y aguacate, salsa de teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81d9f77825_1776819615.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Beni Nube",
+                "price": "$495",
+                "description": "Mantequilla, salsa trufa, topping fideo crujiente",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81ec43dc47_1776819908.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Urumaki Iceb (8u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Urumaki Iceb Salmón",
+                "price": "$785",
+                "description": "Salmón, aguacate, lechuga, alga de arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8177a034dc_1776818042.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Iceb Atún",
+                "price": "$815",
+                "description": "Atún, aguacate, lechuga, alga de arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81823ad2dc_1776818211.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Iceb Chicken",
+                "price": "$785",
+                "description": "Pollo, aguacate, lechuga, alga de arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81883d9663_1776818307.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Urumaki Iceb Ebi",
+                "price": "$815",
+                "description": "Langostino, aguacate, lechuga, alga de arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e818f7f3b74_1776818423.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Nigiris (4u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Nigiri salmón",
+                "price": "$595",
+                "description": "Salmón y arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8192250b53_1776818466.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Atún",
+                "price": "$625",
+                "description": "Atún y arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8193cac54f_1776818492.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Mantequilla",
+                "price": "$595",
+                "description": "Mantequilla y arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819618c173_1776818529.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Langostino",
+                "price": "$595",
+                "description": "Langostino y arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81980edf66_1776818560.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Codorniz",
+                "price": "$595",
+                "description": "Huevo de codorniz y arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819a156bb9_1776818593.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Nigiris Flambeado": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Nigiri Salmón flambeado",
+                "price": "$625",
+                "description": "Salmón, arroz, salsa beni, salsa teriyaki, sésamo, flambeado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819cd2c9ac_1776818637.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri atún flambeado",
+                "price": "$665",
+                "description": "Atún, arroz, salsa beni, salsa teriyaki, sésamo, flambeado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e819f226533_1776818674.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Mantequilla Flambeado",
+                "price": "$625",
+                "description": "Mantequilla, arroz, salsa beni, salsa teriyaki, sésamo, flambeado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81a2dea95e_1776818733.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Unagi flambeado",
+                "price": "$665",
+                "description": "Anguila, arroz, salsa beni, salsa unagi, sésamo, flambeado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81aba24420_1776818874.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Nigiri Atún con Foie flambeado",
+                "price": "$695",
+                "description": "Atún, arroz, foie, salsa teriyaki, sesamo, flambeado",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81adb7eff3_1776818907.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Hosomaki (8u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Hosomaki salmón",
+                "price": "$465",
+                "description": "Salmón, Arroz y alga nori",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8223370776_1776820787.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki atún",
+                "price": "$485",
+                "description": "Atún, Arroz y alga nori",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82266f3253_1776820838.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki ebi",
+                "price": "$510",
+                "description": "Langostino crujiente, arroz , alga, con salsa teriyaki",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8229a7cb0a_1776820890.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki aguacate",
+                "price": "$455",
+                "description": "Aguacate, Arroz y alga nori",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8233b9f121_1776821051.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki pepino",
+                "price": "$455",
+                "description": "Pepino, Arroz y alga nori",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8235d6f9bc_1776821085.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Hosomaki Beni (8u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Hosomaki frito salmón",
+                "price": "$595",
+                "description": "Salmon, arroz, queso, alga nori, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e825019d9ff_1776821505.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki frito atún",
+                "price": "$625",
+                "description": "Atún, arroz, queso, alga nori, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82539b664b_1776821561.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki frito queso",
+                "price": "$665",
+                "description": "Crema Queso, arroz, queso, alga nori, salsa teriyaki y cebolla crujiente",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e825a76be12_1776821671.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki frito fresa",
+                "price": "$595",
+                "description": "Fresa, arroz, queso, alga nori, salsa sirope y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e825f46483c_1776821748.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Hosomaki frito mango",
+                "price": "$595",
+                "description": "Mango, arroz, queso, alga nori, salsa mango",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82618d9263_1776821784.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Poker": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Poker salmón",
+                "price": "$995",
+                "description": "Salmon, Edamame, cebolla crujiente, mango, wakame,\r\nsalsa mayo, salsa teriyaki, sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e81f63dcca0_1776820067.webp",
+                "status": "activo"
+            },
+            {
+                "name": " Poker atún",
+                "price": "$1,095",
+                "description": "Atún, edamame, cebolla Crujiente, mango, Wakame, salsa mayo, salsa teriyaki, sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cf0534aff_1776799493.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Poker chicken",
+                "price": "$995",
+                "description": "Pollo, edamame, cebolla crujiente, mango, wakame, salsa mayo, salsa teriyaki, sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cf8c2d6fe_1776799628.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Poker ebi",
+                "price": "$995",
+                "description": "Langostino, edamame, cebolla crujiente, mango, wakame, salsa mayo, salsa teriyaki, sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7cfec20345_1776799724.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Poker vegetal",
+                "price": "$895",
+                "description": "Toufu, Edamame, cebolla crujiente, mango, wakame, salsa mayo, salsa teriyaki, Sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8221fc058f_1776820767.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Tataki (8u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Tataki salmón",
+                "price": "$995",
+                "description": "Salmón marcado por fuera y crudo por dentro con salsa yakiniku y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e826cd72a87_1776821965.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tataki atún",
+                "price": "$1,095",
+                "description": "Atún marcado por fuera y crudo por dentro con salsa yakiniku y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82713681a5_1776822035.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tataki solomillo",
+                "price": "$1,195",
+                "description": "Solomillo marcado por fuera y crudo por dentro con salsa\r\nyakiniku y sesamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8274599b2e_1776822085.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Sashimi": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Sashimi salmón",
+                "price": "$1,195",
+                "description": "Filete de salmón",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82775314c3_1776822133.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sashimi atún",
+                "price": "$1,259",
+                "description": "Filete de atún",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8279cdbc7a_1776822172.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sashimi mantequilla",
+                "price": "$1,195",
+                "description": "Filete de mantequilla",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e827fd72947_1776822269.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Gunka (2u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Gunka queso",
+                "price": "$329",
+                "description": "Queso, arroz, cubierto lamina de salmón",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8283cc0791_1776822332.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gunka salmón",
+                "price": "$329",
+                "description": "Salmón, aguacate, arroz, algas, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82887aa767_1776822407.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gunka atún",
+                "price": "$359",
+                "description": "Atún, aguacate, arroz, algas, salsa unagi y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e828ca13a71_1776822474.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Tartar": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Tartar salmón",
+                "price": "$995",
+                "description": "Salmón, aguacate, arroz, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82945b2006_1776822597.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tartar atún",
+                "price": "$1,095",
+                "description": "Atún, aguacate, arroz, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8296cc595f_1776822636.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tartar tropicaru",
+                "price": "$1,195",
+                "description": "Salmón, aguacate, mango, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e829ca80112_1776822730.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tartar cocido",
+                "price": "$1,195",
+                "description": "Salmón cocido, patata, huevo, aguacate, salsa saté y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82a183da35_1776822808.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Temaki (1u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Temaki salmón",
+                "price": "$425",
+                "description": "Salmón, aguacate, arroz, alga nori, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82a63558be_1776822883.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Temaki atún",
+                "price": "$455",
+                "description": "Atún, aguacate, arroz, alga nori, salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82adc3a335_1776823004.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Temaki anguila",
+                "price": "$495",
+                "description": "Anguila, aguacate, arroz, alga nori, salsa unagi y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82b0169a74_1776823041.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Temaki hoja verde aguacate",
+                "price": "$395",
+                "description": "Aguacate, Lechuga, alga nori, salsa spicy y salsa teriyaki\r\ny sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82b3ee6d80_1776823102.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Temaki hoja amarillo huevo",
+                "price": "$395",
+                "description": "Huevo, aguacate, lechuga, alga nori, salsa spicy y salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82b995137a_1776823193.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Temaki hoja roja salmón",
+                "price": "$425",
+                "description": "Salmón, pepino, lechuga, alga nori, salsa spicy y salsa teriyaki y sésamo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d62728949_1776801319.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Onigiri (1u)": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Onigiri salmón",
+                "price": "$455",
+                "description": "Salmón, salsa mayo, arroz, topping furikake",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82c570f078_1776823383.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Onigiri Chicken",
+                "price": "$455",
+                "description": "Pollo, salsa mayo, arroz, topping furikake",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82e62eaaa9_1776823906.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Onigiri Ebi",
+                "price": "$455",
+                "description": "Langostino, salsa mayo, arroz, topping furikake",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e82d9e2175b_1776823710.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Combos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Combo 1",
+                "price": "$1,495",
+                "description": "Nigiri salmón (10u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d789dbe7d_1776801673.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 2",
+                "price": "$1,595",
+                "description": "Nigiri Salmon (1u), nigiri Atun (1u), nigiri langostino (1u), nigiri angila (1u), sashimi salmon (3u), sashimi atun (3u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d7d97cd19_1776801753.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 3",
+                "price": "$1,395",
+                "description": "Nigiri Salmon llambeado (2u), Nigiri atún flambeado (2u), nigiri mantequilla flambeado (2u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d87aca2e6_1776801914.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 4",
+                "price": "$1,595",
+                "description": "Hosomaki salmón (8u), hosomaki atún (8u), hosomaki aguacate (8u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d8c04725b_1776801984.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 5",
+                "price": "$1,795",
+                "description": "Uramaki salmón (8u), hosomaki salmón (8u), Nigiri Salmón (4u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7d9051ee17_1776802053.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 6 ",
+                "price": "$1,895",
+                "description": "Uramaki Salmón (8u), hosomaki Atún (4u), hosomaki salmón (4u), nigiri salmón (2u), nigiri Atún (2u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7da3a45da5_1776802362.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 7",
+                "price": "$2,395",
+                "description": "Uramaki salmón (8u), uramaki beni crunch (8u), uramaki beni dragon (8u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7da8e60a84_1776802446.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 8",
+                "price": "$2,395",
+                "description": "Uramaki beni rainbow (8u), hosomaki atún (8u), Hosomaki salmón (8u), hosomaki aguacate (8u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7dae44a9db_1776802532.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Combo 9",
+                "price": "$2,395",
+                "description": "Uramaki chicken (8u), uramaki beni crunch (8u), hosomaki frito salmón (8u)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7db284919d_1776802600.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Ramen": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Tallarines Umami Pasta (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f10a7869a_1776808202.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tallarines Yakisoba Pasta (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f16c1833f_1776808300.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pad Thai Pasta (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f187ab60f_1776808327.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Udon Pasta (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f19f531e7_1776808351.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Fideo fino Pasta (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f1b61ade2_1776808374.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Miso Caldo (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2067537b_1776808454.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Clásico Caldo (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f228830df_1776808488.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Picante Caldo (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f24256fd6_1776808514.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f268070a8_1776808552.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ternera (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f27fccf32_1776808575.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Marisco (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2950c27e_1776808597.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ebi tempura ",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2a73baa2_1776808615.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pato",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2b58a59c_1776808629.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cerdo (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2d0c36b5_1776808656.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Verduras (TOPPING)",
+                "price": "$895",
+                "description": "Se puede elegir este topping para la base del ramen que lleva verdura y huevo",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f2e50797a_1776808677.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Pasta\/Arroz": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Tallarines Umami (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f357b630d_1776808791.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tallarines Yakisoba Pasta (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f39e3d159_1776808862.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pad Thai Pasta (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f3b6ee63c_1776808886.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Udon Pasta (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f3c6e2507_1776808902.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Fideo fino Pasta (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f3dba23bc_1776808923.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Arroz Pasta (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f4647c4bd_1776809060.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salsa Curry (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f480f251c_1776809088.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salsa agridulce (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f49edb228_1776809118.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ostra Salsa (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f4b5e00b6_1776809141.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salsa teriyaki",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f4c7a54f8_1776809159.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salsa picante (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f5106854b_1776809232.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Salsa saté (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f528731f0_1776809256.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pollo (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f5dd84eb8_1776809437.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Ternera (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f65d6649e_1776809565.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Gamba (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f67135ac3_1776809585.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cerdo (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f686537a5_1776809606.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Pato (TOPPING) ",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f6a139bb7_1776809633.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Verduras (TOPPING)",
+                "price": "$695",
+                "description": "Se puede elegir este topping para la base de la pasta\/arroz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f6afd0493_1776809647.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Bebidas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Agua",
+                "price": "$210",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f97ae9a87_1776810362.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Agua con gas",
+                "price": "$210",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f99917637_1776810393.webp",
+                "status": "activo"
+            },
+            {
+                "name": "COCA-COLA Normal",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7f93ac5f8b_1776810298.webp",
+                "status": "activo"
+            },
+            {
+                "name": "COCA-COLA Zero",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fa38119f6_1776810552.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Fuze tea",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fa630ae18_1776810595.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Aquarius Limón",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fa91cb5b9_1776810641.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Mahou",
+                "price": "$260",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fac8bf3f3_1776810696.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Magna",
+                "price": "$260",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7faf1c56e8_1776810737.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Corona",
+                "price": "$260",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fb4802c8b_1776810824.webp",
+                "status": "activo"
+            },
+            {
+                "name": "San Miguel",
+                "price": "$230",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fb8f02525_1776810895.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sapporo",
+                "price": "$310",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fc0855641_1776811016.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Fanta Limón",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fc3985509_1776811065.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Aquarius naranja",
+                "price": "$250",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fc95a52a9_1776811157.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Galicia",
+                "price": "$260",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fcb4a96c3_1776811188.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Vinos Tintos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "VG. Bodal Negro",
+                "price": "$1,695",
+                "description": "Bodal . D.O.P UtielRequena (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7fd86bddb7_1776811398.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Cune Crianza",
+                "price": "$1,650",
+                "description": "Tempranillo, Garnacha tinta y Mazuelo D.O.Ca. Rioja",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ff5f0fafc_1776811871.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Viña Pedrosa Crianza",
+                "price": "$2,595",
+                "description": "Tempranillo . D.O.P, Ribera del Duero",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e7ffca1977a_1776811978.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Enate Joven",
+                "price": "$1,595",
+                "description": "Cabernet Sauvignon y Merlot . D.O.P Sotomontano",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e800360c16e_1776812086.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Vinos Blancos": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Alto Turia   ",
+                "price": "$1,295",
+                "description": "Merseguera . D.O_P. Valencia",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e800fdeac82_1776812285.webp",
+                "status": "activo"
+            },
+            {
+                "name": " Ceramic Sauvignon Blanc  ",
+                "price": "$1,895",
+                "description": "D.O.P. Valencia (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8015180578_1776812369.webp",
+                "status": "activo"
+            },
+            {
+                "name": " VG Bodal Blanco   ",
+                "price": "$1,695",
+                "description": "Blanc de Noirs . D.O.P, Utel.Requen (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e801a244aab_1776812450.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Impromptu",
+                "price": "$2,600",
+                "description": "Sauvignon Blanc . D.O.P, Utiel.Requena",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e803496ebaf_1776812873.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Viña Mocén ",
+                "price": "$1,450",
+                "description": "Verdejo . D.O.P, Rueda",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e803945428e_1776812948.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Monopole",
+                "price": "$1,550",
+                "description": "Verdejo . D.O P. Rueda",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e803fe1637e_1776813054.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Enate 234",
+                "price": "$1,650",
+                "description": "Chardonnay .D.O.P, Samontano",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8060854710_1776813576.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Barbadillo",
+                "price": "$1,450",
+                "description": "Palomino . Cádiz",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80663e51bf_1776813667.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Sandara Blanco ",
+                "price": "$1,295",
+                "description": "España .Chardonnay y otras (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e806e7cb562_1776813799.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Uva Pirata",
+                "price": "$1,350",
+                "description": "España (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8071d75f45_1776813853.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Vinos Rosadas": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "VG. Bodal Rosa ",
+                "price": "$1,695",
+                "description": "Bodal .D.O.P UteLRequena (RECOMENDADO)",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80788393f2_1776813960.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Impromptu",
+                "price": "$2,600",
+                "description": "Pinot Noir . D.O.p Utiel.Requena",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8080523be4_1776814085.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Lambrusco",
+                "price": "$1,250",
+                "description": "D.0.C Lambrusco",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8084e7ee4d_1776814158.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "Postres": {
+        "status": "activo",
+        "products": [
+            {
+                "name": " Mochi chocolate\/Te verde\/Fresa ",
+                "price": "$350",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e808c017421_1776814272.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Tarta queso",
+                "price": "$355",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e80914a5580_1776814356.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Dorayaki",
+                "price": "$295",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69e8093baa42b_1776814395.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "_settings": {
+        "call_waiter_enabled": true,
+        "colors": {
+            "background": "#0F1A14",
+            "card_background": "#1C2B22",
+            "primary": "#A3C9A8",
+            "primary_dark": "#A3C9A8",
+            "primary_light": "#1C2B22",
+            "text_primary": "#A3C9A8",
+            "text_secondary": "#A3C9A8",
+            "header_bg": "#1C2B22",
+            "header_text": "#A3C9A8"
+        }
+    }
+}

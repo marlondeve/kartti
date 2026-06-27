@@ -1,4 +1,63 @@
 {
+    "POLLO CARAMELIZADO": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "1\/4 POLLO CARAMELIZADO",
+                "price": "$22,000",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69f91ba9506f3_1777933225.webp",
+                "status": "activo"
+            },
+            {
+                "name": "1\/2 POLLO CARAMELIZADO",
+                "price": "$39,999",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69f91bd80e635_1777933272.webp",
+                "status": "activo"
+            },
+            {
+                "name": "POLLO ENTERO",
+                "price": "$59,999",
+                "description": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69f91be6b066c_1777933286.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "HAMBURGUESAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "LA PUPILETA",
+                "price": "$34,000",
+                "description": "Carne artesanal, súper ranchera, huevo frito, guacamole, queso, incluye papa francesa.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/693c9461be4a2_1765577825.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "LA CARRETA",
+                "price": "$26,000",
+                "description": "Carne de la casa, tocineta, queso, papa francesa.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/693c96a5cba91_1765578405.jpeg",
+                "status": "activo"
+            },
+            {
+                "name": "LA TRAVIESA",
+                "price": "$20,700",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "DOBLE CARNE",
+                "price": "$26,000",
+                "description": "",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
     "MICHELADAS": {
         "status": "activo",
         "products": [
@@ -16,35 +75,35 @@
         "products": [
             {
                 "name": "PICA COSTI 2P",
-                "price": "$48,000",
+                "price": "$49,500",
                 "description": "Ranchera, costilla de cerdo BBQ, queso gratinado, papa francesa, lechuga, salsa, ripio.",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693f4629e4035_1765754409.png",
                 "status": "activo"
             },
             {
                 "name": "NOMEJODITA 1P",
-                "price": "$25,000",
+                "price": "$27,000",
                 "description": "Mezcla de carnes frías, pollo, cerdo, chicharroncito, trocitos de plátano maduro, maicitos, papa francesa, lechuga, salsa, ripio.\r\nGRATINADO + 5.000.",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693f464f98642_1765754447.jpeg",
                 "status": "activo"
             },
             {
                 "name": "NOMEJODITA 2P",
-                "price": "$43,600",
-                "description": "Mezcla de carnes frías, pollo, cerdo, chicharroncito, trocitos de plátano maduro, maicitos, papa francesa, lechuga, salsa, ripio.\r\nGRATINADO + 5.000.",
+                "price": "$45,600",
+                "description": "Mezcla de carnes frías, pollo, cerdo, chicharroncito, trocitos de plátano maduro, maicitos, papa francesa, lechuga, salsa, ripio.\r\nGRATINADO + 4.400.",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693f466fe4e1c_1765754479.jpeg",
                 "status": "activo"
             },
             {
                 "name": "NOMEJODITA 4P",
-                "price": "$65,000",
+                "price": "$72,000",
                 "description": "Mezcla de carnes frías, pollo, cerdo, chicharroncito, trocitos de plátano maduro, maicitos, papa francesa, lechuga, salsa, ripio.\r\nGRATINADO + 5.000.",
                 "image": "",
                 "status": "activo"
             },
             {
                 "name": "MINI SUIZO 1P",
-                "price": "$19,600",
+                "price": "$21,000",
                 "description": "Salchicha suiza, chorizo, butifarra, queso costeño, papa francesa, lechuga, salsa, ripio.\r\n",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/69421ebb9a616_1765940923.jpeg",
                 "status": "activo"
@@ -58,7 +117,7 @@
             },
             {
                 "name": "SÚPER PICADA 5P",
-                "price": "$89,990",
+                "price": "$90,000",
                 "description": "Mezcla de carnes frías, costilla biche, madurito, huevo de codorniz, maicitos, queso gratinado, papa francesa, lechuga, salsa, ripio.\r\n",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693c95d5ce3bb_1765578197.jpeg",
                 "status": "activo"
@@ -79,62 +138,29 @@
             },
             {
                 "name": "PICADA DE RES",
-                "price": "$25,000",
-                "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio.\r\n",
-                "image": "",
-                "status": "activo"
-            },
-            {
-                "name": "PICADA DE POLLO",
-                "price": "$25,000",
-                "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio.\r\n",
-                "image": "",
-                "status": "activo"
-            },
-            {
-                "name": "PICADA MIXTA",
                 "price": "$27,000",
                 "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio.\r\n",
                 "image": "",
                 "status": "activo"
             },
             {
+                "name": "PICADA DE POLLO",
+                "price": "$27,000",
+                "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio.\r\n",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "PICADA MIXTA",
+                "price": "$29,000",
+                "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio.\r\n",
+                "image": "",
+                "status": "activo"
+            },
+            {
                 "name": "PICADA CARRETON",
-                "price": "$52,000",
+                "price": "$54,000",
                 "description": "Todas todas nuestras picadas, traen papa francesa, lechuga, salsa, ripio. 3 Personas\r\n",
-                "image": "",
-                "status": "activo"
-            }
-        ]
-    },
-    "HAMBURGUESAS": {
-        "status": "activo",
-        "products": [
-            {
-                "name": "LA PUPILETA",
-                "price": "$34,000",
-                "description": "Carne artesanal, súper ranchera, huevo frito, guacamole, queso, incluye papa francesa.",
-                "image": "https:\/\/kartti.com\/uploads\/productos\/693c9461be4a2_1765577825.jpeg",
-                "status": "activo"
-            },
-            {
-                "name": "LA CARRETICA",
-                "price": "$24,000",
-                "description": "Carne de la casa, tocineta, queso, papa francesa.",
-                "image": "https:\/\/kartti.com\/uploads\/productos\/693c96a5cba91_1765578405.jpeg",
-                "status": "activo"
-            },
-            {
-                "name": "LA TRAVIESA",
-                "price": "$18,700",
-                "description": "",
-                "image": "",
-                "status": "activo"
-            },
-            {
-                "name": "DOBLE CARNE ",
-                "price": "$23,000",
-                "description": "",
                 "image": "",
                 "status": "activo"
             }
@@ -195,28 +221,28 @@
         "products": [
             {
                 "name": "TOCINETUDO",
-                "price": "$20,900",
+                "price": "$22,900",
                 "description": "Con una exquisita salchicha premium y nuestra exquisita tocineta ahumada, lechuga cebolla salsa y papa rico",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693c974ba1e95_1765578571.jpeg",
                 "status": "activo"
             },
             {
                 "name": "PERRO RANCHERO",
-                "price": "$20,900",
+                "price": "$22,900",
                 "description": "Súper ranchera, tocineta ahumada, lechuga cebolla salsa y papa rico.",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693c974085401_1765578560.jpeg",
                 "status": "activo"
             },
             {
                 "name": "PERRO SUIZO",
-                "price": "$20,900",
+                "price": "$22,900",
                 "description": "Salchicha Suiza Zenú, lechuga cebolla salsa y papa rico",
                 "image": "",
                 "status": "activo"
             },
             {
                 "name": "PERRO SENCILLO",
-                "price": "$12,000",
+                "price": "$14,000",
                 "description": "Salchicha Zenú, lechuga cebolla salsa y papa rico",
                 "image": "",
                 "status": "activo"
@@ -228,7 +254,7 @@
         "products": [
             {
                 "name": "TRIFÁSICO",
-                "price": "$26,000",
+                "price": "$28,000",
                 "description": "Papa Francesa, Pollo, Chorizo, Butifarra, Queso Gratinado, Maicito Tierno, Tocineta.",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693f478de5ce5_1765754765.jpeg",
                 "status": "activo"
@@ -240,14 +266,14 @@
         "products": [
             {
                 "name": "SALCHIPAPA RANCHERA",
-                "price": "$22,000",
+                "price": "$25,000",
                 "description": "Salchicha Ranchera, Queso Costeño, Salsa, Lechuga, Ripio, Papa Francesa. ",
                 "image": "",
                 "status": "activo"
             },
             {
                 "name": "SALCHIPAPA SENCILLA",
-                "price": "$18,000",
+                "price": "$19,000",
                 "description": "Salchicha, Lechuga, Queso Costeño, Salsa, Ripio, Papa Francesa.",
                 "image": "",
                 "status": "activo"
@@ -259,44 +285,44 @@
         "products": [
             {
                 "name": "1\/4 ARROZ CHINO",
-                "price": "$22,000",
+                "price": "$25,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693c9667e8933_1765578343.jpeg",
                 "status": "activo"
             },
             {
                 "name": "1\/2 ARROZ CHINO",
-                "price": "$32,000",
+                "price": "$35,000",
                 "description": "",
-                "image": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a07594bb49a7_1778866507.webp",
                 "status": "activo"
             },
             {
                 "name": "CHINO ENTERO",
-                "price": "$54,000",
+                "price": "$59,000",
                 "description": "",
-                "image": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a075953d9283_1778866515.webp",
                 "status": "activo"
             },
             {
                 "name": "1\/4 ARROZ CUBANO",
-                "price": "$22,000",
+                "price": "$25,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/693c965c69276_1765578332.jpeg",
                 "status": "activo"
             },
             {
-                "name": "CUBANO ENTERO",
-                "price": "$54,000",
+                "name": "1\/2 ARROZ CUBANO",
+                "price": "$35,000",
                 "description": "",
-                "image": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a0759832faa4_1778866563.webp",
                 "status": "activo"
             },
             {
-                "name": "1\/2 ARROZ CUBANO",
-                "price": "$32,000",
+                "name": "CUBANO ENTERO",
+                "price": "$59,000",
                 "description": "",
-                "image": "",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/6a07597d8c0f0_1778866557.webp",
                 "status": "activo"
             }
         ]
@@ -484,7 +510,7 @@
             },
             {
                 "name": "AGUA",
-                "price": "$2,800",
+                "price": "$4,500",
                 "description": "",
                 "image": "https:\/\/kartti.com\/uploads\/productos\/69418bea18117_1765903338.png",
                 "status": "activo"

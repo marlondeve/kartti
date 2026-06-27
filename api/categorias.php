@@ -73,15 +73,23 @@ function actualizarJsonMenu($restaurante_id) {
             throw new Exception('El directorio no tiene permisos de escritura');
         }
         
-        // Guardar el JSON y agregar log del path
         $jsonPath = $dirPath . '/restaurante' . $restaurante_id . '.json';
+        // Preservar _settings y otras claves que empiecen por _ (ej. colores, WhatsApp) al reescribir el menú
+        $dataToWrite = $menuData;
+        if (file_exists($jsonPath)) {
+            $existing = json_decode(file_get_contents($jsonPath), true);
+            if (is_array($existing)) {
+                foreach ($existing as $key => $value) {
+                    if (strpos($key, '_') === 0) {
+                        $dataToWrite[$key] = $value;
+                    }
+                }
+            }
+        }
         error_log("Guardando JSON en: " . $jsonPath);
-        
-        if (file_put_contents($jsonPath, json_encode($menuData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) === false) {
+        if (file_put_contents($jsonPath, json_encode($dataToWrite, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) === false) {
             throw new Exception('No se pudo escribir el archivo JSON');
         }
-        
-        // Log de éxito
         error_log("JSON actualizado exitosamente");
         
         return true;

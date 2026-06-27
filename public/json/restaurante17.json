@@ -1,76 +1,95 @@
 {
-    "Hamburguesas": {
+    "BURGERS": {
         "status": "activo",
         "products": [
             {
-                "name": "LA BABY",
-                "price": "$15,900",
+                "name": "Clásica sencilla",
+                "price": "$21,990",
                 "description": "\r\nUn clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, tocineta,  y un toque fresco de lechuga, tomate y cebolla cruda.",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691520d9bc99a_1762992345.jpg",
-                "status": "activo"
+                "status": "inactivo"
             },
             {
-                "name": "LA BABY DOBLE",
-                "price": "$19,990",
+                "name": "CLASICA doble carne",
+                "price": "$26,000",
                 "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda.",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915218a3a314_1762992522.jpg",
-                "status": "activo"
-            },
-            {
-                "name": "LA BABY TRIPLE",
-                "price": "$28,900",
-                "description": "Pan artesanal, tres jugosas carnes de autor (375 g), dos sedoso derretido de queso mozzarella, y la frescura de lechuga. tomate y cebolla cruda. ",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915221d1f973_1762992669.jpg",
-                "status": "activo"
-            },
-            {
-                "name": "1\/2 LIBRA BACON BURGER",
-                "price": "$27,000",
-                "description": "¡Doble carne, doble placer! Pan artesanal, dos suculentas carnes de autor (250 g), un generoso derretido de queso mozzarella, el toque perfecto de nuestro chutney casero mixto, nuestro tocino ahumado, y frescura en cada bocado con lechuga y tomate.",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151df5ec44b_1762991605.png",
-                "status": "activo"
-            },
-            {
-                "name": "1\/4 DE LIBRA",
-                "price": "$19,200",
-                "description": "Mediana en tamaño, inmensa en sabor. Pan artesanal, una jugosa carne de autor 125gr. derretido queso mozzarella, nuestro característico chutney casero mixto, crujiente tocino ahumado, y un mix fresco de lechuga y tomate.",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e4acde78_1762991690.png",
-                "status": "activo"
-            },
-            {
-                "name": "Básica",
-                "price": "$16,000",
-                "description": "Un clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, un explosivo chutney casero mixto (morrón y cebolla), y un toque fresco de lechuga y tomate.",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e762f990_1762991734.png",
-                "status": "activo"
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69f0010a4de92_1777336586.webp",
+                "status": "inactivo"
             },
             {
                 "name": "GAUCHA",
-                "price": "$27,000",
+                "price": "$31,990",
                 "description": "Carne artesanal, chorizo premium, chimichurri, queso asado envuelto en maple, tajadas maduritas, queso mozzarella, vegetales frescos (lechuga, tomate, cebolla blanca en plumas) y pan brioche.",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151eabf3e77_1762991787.png",
                 "status": "activo"
             },
             {
-                "name": "DOBLE CARNE",
-                "price": "$22,500",
-                "description": "Pan artesanal, dos jugosas carnes de autor (250 g). un sedoso derretido de queso mozzarella, nuestro icónico chutney casero mixto, y la frescura de lechuga y tomate.",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691520b896a74_1762992312.png",
+                "name": "SEPTIEMBRE",
+                "price": "$26,000",
+                "description": "\r\n\r\nUna creación de temporada que redefine la perfección y llegó para quedarse. Pan artesanal, nuestra exclusiva carne de autor 125gr, un cremoso queso mozzarella, el dulzor sublime de un meloso de pera, el contraste salado del queso costeño, nuestro tocino ahumado, y un toque fresco de lechuga y tomate. ¡Sabores que conquistan!",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915365bea5fc_1762997851.png",
+                "status": "activo"
+            },
+            {
+                "name": "Básica de estos",
+                "price": "$21,990",
+                "description": "Un clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, un explosivo chutney casero mixto (morrón y cebolla), y un toque fresco de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e762f990_1762991734.png",
+                "status": "activo"
+            },
+            {
+                "name": "1\/4 DE LIBRA",
+                "price": "$24,600",
+                "description": "Mediana en tamaño, inmensa en sabor. Pan artesanal, una jugosa carne de autor 125gr. derretido queso mozzarella, nuestro característico chutney casero mixto, crujiente tocino ahumado, y un mix fresco de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151e4acde78_1762991690.png",
                 "status": "activo"
             },
             {
                 "name": "PERUANA",
-                "price": "$21,900",
+                "price": "$24,000",
                 "description": "Un tributo a los sabores andinos con un toque gourmet. Una jugosa carne de autor (125 g), crujiente tocino ahumado, fascinantes cebollas en pluma al estilo del chef, el irresistible. crunch del maiz tostado, y un cremoso queso fundido, el toque fresco de la lechuga y tomate, todo abrazado por un suave pan artesanal.",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915299f67c08_1762994591.png",
                 "status": "activo"
             },
             {
-                "name": "SEPTIEMBRE",
-                "price": "$22,500",
-                "description": "\r\n\r\nUna creación de temporada que redefine la perfección y llegó para quedarse. Pan artesanal, nuestra exclusiva carne de autor 125gr, un cremoso queso mozzarella, el dulzor sublime de un meloso de pera, el contraste salado del queso costeño, nuestro tocino ahumado, y un toque fresco de lechuga y tomate. ¡Sabores que conquistan!",
-                "image": "https:\/\/kartti.com\/\/uploads\/productos\/6915365bea5fc_1762997851.png",
+                "name": "DOBLE CARNE",
+                "price": "$26,000",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g). un sedoso derretido de queso mozzarella, nuestro icónico chutney casero mixto, y la frescura de lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/691520b896a74_1762992312.png",
                 "status": "activo"
+            },
+            {
+                "name": "1\/2 LIBRA BACON BURGER",
+                "price": "$31,990",
+                "description": "¡Doble carne, doble placer! Pan artesanal, dos suculentas carnes de autor (250 g), un generoso derretido de queso mozzarella, el toque perfecto de nuestro chutney casero mixto, nuestro tocino ahumado, y frescura en cada bocado con lechuga y tomate.",
+                "image": "https:\/\/kartti.com\/\/uploads\/productos\/69151df5ec44b_1762991605.png",
+                "status": "activo"
+            }
+        ]
+    },
+    "HB Clásica": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Clásica sencilla",
+                "price": "$21,990",
+                "description": "Un clásico que nunca falla. Pan artesanal suave, una jugosa carne de res de 125 g, coronada con un sedoso queso mozzarella, tocineta,  y un toque fresco de lechuga, tomate y cebolla cruda.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69714c91c31cd_1769032849.webp",
+                "status": "activo"
+            },
+            {
+                "name": "CLASICA doble carne",
+                "price": "$26,000",
+                "description": "Pan artesanal, dos jugosas carnes de autor (250 g), un sedoso derretido de queso mozzarella, y la frescura de lechuga, tomate y cebolla cruda. ¡Para los que quieren todo y más!",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69714c9ab25a4_1769032858.webp",
+                "status": "activo"
+            },
+            {
+                "name": "BABY TRIPLE CARNE",
+                "price": "$28,900",
+                "description": "Pan artesanal, tres jugosas carnes de autor (375 g), dos sedoso derretido de queso mozzarella, y la frescura de lechuga. tomate y cebolla cruda. ¡Para verdaderos carnívoros!",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/69714ca785f9e_1769032871.webp",
+                "status": "inactivo"
             }
         ]
     },
@@ -79,7 +98,7 @@
         "products": [
             {
                 "name": "PAPA FRANCESA",
-                "price": "$4,000",
+                "price": "$6,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691522ce445fd_1762992846.webp",
                 "status": "activo"
@@ -139,29 +158,36 @@
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152446aac51_1762993222.jpg",
                 "status": "activo"
+            },
+            {
+                "name": "Guacamole ",
+                "price": "$3,500",
+                "description": "",
+                "image": "",
+                "status": "activo"
             }
         ]
     },
-    "Combos": {
+    "Combo": {
         "status": "activo",
         "products": [
             {
                 "name": "COMBO 1",
-                "price": "$39,900",
+                "price": "$42,000",
                 "description": "Burger 1\/2 libra bacon + milk shake (tú eliges el sabor).",
                 "image": "",
                 "status": "activo"
             },
             {
                 "name": "COMBO 2",
-                "price": "$33,900",
+                "price": "$36,000",
                 "description": "Burger 1\/4 libra bacon + milk shake (tú eliges el sabor).",
                 "image": "",
                 "status": "activo"
             }
         ]
     },
-    "Milk Shake's": {
+    "Malteadas": {
         "status": "activo",
         "products": [
             {
@@ -206,7 +232,7 @@
         "products": [
             {
                 "name": "RES",
-                "price": "$27,000",
+                "price": "$29,000",
                 "description": "",
                 "image": "",
                 "status": "activo"
@@ -232,9 +258,9 @@
         "products": [
             {
                 "name": "LA ESPELUCÁ",
-                "price": "$27,000",
+                "price": "$31,000",
                 "description": "Carne desmechada, papitas fritas, pico e' gallo, guacamole, salchicha ranchera, queso gratinado, salsas.",
-                "image": "https:\/\/kartti.com\/uploads\/productos\/6939ae564f0a5_1765387862.jpg",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/697242960058a_1769095830.webp",
                 "status": "activo"
             },
             {
@@ -249,7 +275,7 @@
                 "price": "$45,000",
                 "description": "Mezcla de carnes, papitas fritas, tocino ahumado en trocitos, queso gratinado, salsas.",
                 "image": "",
-                "status": "activo"
+                "status": "inactivo"
             }
         ]
     },
@@ -265,7 +291,7 @@
             },
             {
                 "name": "AGUA BRISA 600ML",
-                "price": "$3,000",
+                "price": "$4,500",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/69152690b2a10_1762993808.png",
                 "status": "activo"
@@ -289,7 +315,7 @@
                 "price": "$5,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f583298e47_1763661874.jpeg",
-                "status": "activo"
+                "status": "inactivo"
             },
             {
                 "name": "QUATRO PET 400",
@@ -357,7 +383,7 @@
                 "price": "$8,000",
                 "description": "",
                 "image": "https:\/\/kartti.com\/\/uploads\/productos\/691f5ae07f811_1763662560.jpeg",
-                "status": "activo"
+                "status": "inactivo"
             },
             {
                 "name": "CLUB COLOMBIA",
@@ -375,7 +401,7 @@
             }
         ]
     },
-    "Sodas Micheladas": {
+    "Michelada refrescante": {
         "status": "activo",
         "products": [
             {
@@ -437,7 +463,7 @@
                 "price": "$10,000",
                 "description": "",
                 "image": "",
-                "status": "activo"
+                "status": "inactivo"
             },
             {
                 "name": "Limonada de coco",
@@ -451,7 +477,7 @@
                 "price": "$10,000",
                 "description": "",
                 "image": "",
-                "status": "activo"
+                "status": "inactivo"
             },
             {
                 "name": "Corozo",
@@ -461,5 +487,19 @@
                 "status": "activo"
             }
         ]
+    },
+    "_settings": {
+        "call_waiter_enabled": false,
+        "colors": {
+            "background": "#1A1A1A",
+            "card_background": "#272728",
+            "primary": "#B38D57",
+            "primary_dark": "#80653E",
+            "primary_light": "#E4C57F",
+            "text_primary": "#E4C57F",
+            "text_secondary": "#B38D57",
+            "header_bg": "#272728",
+            "header_text": "#B38D57"
+        }
     }
 }

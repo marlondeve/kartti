@@ -22,13 +22,13 @@ window.utils = {
                 console.debug('utils.fetch ->', requestUrl);
             }
 
+            const isFormData = options.body && typeof FormData !== 'undefined' && options.body instanceof FormData;
             const response = await fetch(requestUrl, {
                 ...options,
                 credentials: 'same-origin',
-                headers: {
-                    'Content-Type': 'application/json',
-                    ...options.headers
-                }
+                headers: isFormData
+                    ? { ...options.headers }
+                    : { 'Content-Type': 'application/json', ...options.headers }
             });
 
             if (!response.ok) {

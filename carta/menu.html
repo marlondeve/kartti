@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="notranslate" translate="no">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="notranslate">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col h-screen overflow-hidden items-center" style="background-color: var(--color-background, #1a1a1a);">
+<body class="flex flex-col min-h-0 h-screen overflow-hidden items-center carta-body" style="background-color: var(--color-background, #1a1a1a);">
     <div id="spinnerOverlay" class="spinner-overlay">
         <div role="status">
             <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#B38D57]" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +22,7 @@
         </div>
     </div>
     <!-- Header de la carta centrado -->
-    <div class="flex flex-col justify-center items-center w-[90%] p-3 mt-4 rounded-2xl drop-shadow-lg flex-shrink-0 mx-auto" style="background-color: var(--color-card-background, #272728);">
+    <div class="flex flex-col justify-center items-center w-[90%] p-3 mt-4 rounded-2xl drop-shadow-lg flex-shrink-0 mx-auto carta-header" style="background-color: var(--color-card-background, #272728);">
         <h1 id="restaurantTitle" style="text-transform: uppercase; color: var(--color-header-text, #B38D57);" class="text-2xl sm:text-3xl font-bold leading-tight text-center">Cargando...</h1>
         <p id="qrTitle" style="color: var(--color-text-primary, #E4C57F);" class="text-xs sm:text-sm font-normal mt-1 text-center"></p>
     </div>
@@ -52,8 +57,8 @@
             </div>
         </div>
     </div>
-    <main id="mainContainer" class="w-full flex-1 overflow-hidden px-4 pb-24 relative" style="padding-left: 0.6rem; overflow: initial;">
-        <div id="sliderWrapper" class="flex transition-transform duration-300 ease-in-out h-full" style="width: 100%;">
+    <main id="mainContainer" class="w-full flex-1 min-h-0 overflow-hidden px-4 pb-24 relative carta-main" style="padding-left: 0.6rem;">
+        <div id="sliderWrapper" class="flex transition-transform duration-300 ease-in-out h-full min-h-0" style="width: 100%;">
             <!-- Cards will be generated here -->
         </div>
         <div class="fixed left-0 top-1/2 transform -translate-y-1/2 z-10 hidden" id="prevBtn">
@@ -71,7 +76,7 @@
             </button>
         </div>
     </main>
-    <section class="fixed bottom-0 left-0 right-0 flex flex-col items-center gap-2 flex-shrink-0" style="background-color: var(--color-background, #1a1a1a); padding-top: 8px; padding-bottom: 8px;">
+    <section class="fixed bottom-0 left-0 right-0 flex flex-col items-center gap-2 flex-shrink-0 carta-bottom" style="background-color: var(--color-background, #1a1a1a); padding-top: 8px; padding-bottom: 8px;">
         <div id="dotsContainer" class="flex items-center gap-2 p-2">
             <!-- Dots will be added dynamically -->
         </div>
@@ -173,32 +178,33 @@
         </div>
     </div>
 
-    <div id="modalProducto" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="rounded-2xl mx-4 max-w-md w-full shadow-2xl overflow-hidden" style="background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
+    <div id="modalProducto" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+        <div class="rounded-2xl w-full shadow-2xl overflow-hidden relative flex flex-col max-h-[90vh]" style="max-width: 320px; background-color: var(--color-card-background, #272728); border: 2px solid var(--color-primary, #B38D57);">
             <!-- Botón cerrar -->
-            <button id="btnCerrarProducto" class="absolute top-4 right-4 z-10 transition-colors" style="color: var(--color-text-primary, #E4C57F);">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="btnCerrarProducto" class="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-colors hover:opacity-80" style="color: var(--color-text-primary, #E4C57F); background-color: rgba(0,0,0,0.4);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
             
-            <!-- Imagen del producto -->
-            <div id="modalProductoImagen" class="w-full flex items-center justify-center overflow-hidden" style="background-color: var(--color-background, #1a1a1a);">
+            <!-- Imagen del producto: tamaño fijo cuadrado (280x280) -->
+            <div id="modalProductoImagen" class="flex items-center justify-center overflow-hidden mx-auto flex-shrink-0" style="width: 280px; height: 280px; background-color: var(--color-background, #1a1a1a);">
                 <img id="modalProductoImagenSrc" src="" alt="" class="w-full h-full object-cover">
                 <div id="modalProductoImagenPlaceholder" class="hidden w-full h-full flex items-center justify-center" style="background-color: var(--color-card-background, #272728);">
-                    <svg class="w-24 h-24" style="color: var(--color-text-primary, #E4C57F);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-16 h-16" style="color: var(--color-text-primary, #E4C57F);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
                 </div>
             </div>
             
             <!-- Contenido del modal -->
-            <div class="p-6">
-                <h2 id="modalProductoNombre" class="text-2xl font-bold mb-3" style="color: var(--color-primary, #B38D57);"></h2>
-                <p id="modalProductoPrecio" class="text-xl font-semibold mb-4" style="color: var(--color-text-primary, #E4C57F);"></p>
-                <p id="modalProductoDescripcion" class="text-sm leading-relaxed mb-4" style="color: var(--color-text-primary, #E4C57F);"></p>
-                <!-- Botón de ocultar -->
-                <button id="btnOcultarProducto" class="w-full px-4 py-2 rounded-lg font-medium transition-colors" style="background-color: var(--color-primary, #B38D57); color: var(--color-card-background, #272728);">
+            <div class="p-4 flex flex-col min-h-0 flex-1">
+                <h2 id="modalProductoNombre" class="text-lg font-bold mb-2 line-clamp-2 flex-shrink-0" style="color: var(--color-primary, #B38D57);"></h2>
+                <p id="modalProductoPrecio" class="text-lg font-semibold mb-2 flex-shrink-0" style="color: var(--color-text-primary, #E4C57F);"></p>
+                <div class="overflow-y-auto flex-1 min-h-0 mb-3" style="max-height: 120px;">
+                    <p id="modalProductoDescripcion" class="text-sm leading-relaxed pr-1" style="color: var(--color-text-primary, #E4C57F);"></p>
+                </div>
+                <button id="btnOcultarProducto" class="w-full px-4 py-2 rounded-lg font-medium transition-colors text-sm flex-shrink-0" style="background-color: var(--color-primary, #B38D57); color: var(--color-card-background, #272728);">
                     Ocultar
                 </button>
             </div>

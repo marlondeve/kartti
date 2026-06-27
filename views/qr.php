@@ -298,13 +298,10 @@ $user_email = $_SESSION['user_email'];
             if (typeof utils !== 'undefined' && utils.fetch) {
                 return await utils.fetch(url, options);
             } else {
-                // Fallback si utils no está disponible
+                const isFormData = options.body && options.body instanceof FormData;
                 const response = await fetch(url, {
                     ...options,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        ...options.headers
-                    }
+                    headers: isFormData ? (options.headers || {}) : { 'Content-Type': 'application/json', ...(options.headers || {}) }
                 });
                 return await response.json();
             }
@@ -491,6 +488,12 @@ $user_email = $_SESSION['user_email'];
                                                 month: 'short',
                                                 day: 'numeric'
                                             }).replace('.', '')}</p>
+                                            <label class="inline-flex items-center gap-2 mt-2 cursor-pointer text-sm text-gray-300">
+                                                <input type="checkbox" ${(qr.mostrar_nombre_en_carta !== 0 && qr.mostrar_nombre_en_carta !== false) ? 'checked' : ''} 
+                                                       class="w-4 h-4 rounded border-gray-500 bg-gray-600 text-blue-500 focus:ring-blue-600"
+                                                       onchange="updateQRMostrarNombre(${qr.id}, this.checked)">
+                                                <span>Mostrar nombre del QR en la carta</span>
+                                            </label>
                                         </div>
 
                                         <!-- Action Icons -->
@@ -736,13 +739,36 @@ $user_email = $_SESSION['user_email'];
                     showNotification('success', 'Estado del QR actualizado exitosamente');
                 } else {
                     showNotification('error', response.message || 'Error al actualizar el estado del QR');
-                    // Recargar los QRs para mantener la consistencia
                     loadQRs();
                 }
             } catch (error) {
                 console.error('Error:', error);
                 showNotification('error', 'Error al actualizar el estado del QR');
-                // Recargar los QRs para mantener la consistencia
+                loadQRs();
+            }
+        }
+
+        async function updateQRMostrarNombre(id, mostrar) {
+            try {
+                const formData = new FormData();
+                formData.append('action', 'update');
+                formData.append('id', id);
+                formData.append('mostrar_nombre_en_carta', mostrar ? '1' : '0');
+
+                const response = await makeFetch('api/api_qrs.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.success) {
+                    showNotification('success', mostrar ? 'El nombre del QR se mostrará en la carta' : 'En la carta solo se mostrará el nombre del restaurante');
+                } else {
+                    showNotification('error', response.message || 'Error al actualizar la opción');
+                    loadQRs();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('error', 'Error al actualizar la opción');
                 loadQRs();
             }
         }

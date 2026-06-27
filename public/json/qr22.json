@@ -1,0 +1,14 @@
+{
+    "qrs": [
+        {
+            "id": 125,
+            "nombre": "Ninda Meze & Tapas",
+            "tipo": "restaurante",
+            "estado": "activo",
+            "imagen": "uploads\/qrs\/NindaMezeTapas_69e807b146e24.png",
+            "created_at": "2026-04-21 23:26:41",
+            "restaurante_nombre": "Ninda Meze & Tapas",
+            "mostrar_nombre_en_carta": 1
+        }
+    ]
+}

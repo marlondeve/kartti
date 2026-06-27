@@ -281,9 +281,9 @@ if ($restId) {
 
                 <!-- Columna derecha: Vista previa de la carta -->
                 <div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md sticky top-6">
-                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Vista Previa de la Carta</h2>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Los cambios se reflejarán en tiempo real</p>
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md sticky top-6">
+                        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Vista Previa de la Carta</h2>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Los cambios se reflejarán en tiempo real</p>
                         
                         <?php
                         // Obtener el primer QR activo del restaurante para la vista previa

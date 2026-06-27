@@ -1,1 +1,0 @@
-DirectoryIndex [index.php](http://_vscodecontentref_/6) index.html

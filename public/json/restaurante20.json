@@ -1,0 +1,130 @@
+{
+    "FRESAS CON CREMA": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "9 Oz",
+                "price": "$10,000",
+                "description": "-Sin toppings \r\n-1 salsa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696b9cddd44e2_1768660189.webp",
+                "status": "activo"
+            },
+            {
+                "name": "12 Oz",
+                "price": "$15,000",
+                "description": "-1 toppings \r\n-1 salsa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696ae443dbbe6_1768612931.webp",
+                "status": "activo"
+            },
+            {
+                "name": "16 Oz",
+                "price": "$20,000",
+                "description": "-2 toppings\r\n-1 salsa",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696b9ade1af26_1768659678.webp",
+                "status": "activo"
+            }
+        ]
+    },
+    "TOPPINGS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Oreo",
+                "price": "$0",
+                "description": "Galletas Oreo trituradas para agregar un toque crujiente y delicioso.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbaa40bc6a_1768667812.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Minichips",
+                "price": "$0",
+                "description": "Pequeños trozos de chocolate para un toque extra de sabor en cada bocado.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbb1a97fd4_1768667930.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Maní",
+                "price": "$0",
+                "description": "Maní tostado, crujiente y con un sabor salado para balancear los sabores dulces.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbb460809a_1768667974.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Chispas de chocolate",
+                "price": "$0",
+                "description": "Chispas de chocolate negro o con leche, perfectas para añadir un toque extra de chocolate.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbb6b81bfd_1768668011.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Quipitos",
+                "price": "$0",
+                "description": "Dulces pequeños y crujientes que aportan una textura ligera y un sabor delicioso.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbb8050f13_1768668032.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Barquillos",
+                "price": "$0",
+                "description": "Crujientes barquillos de vainilla que añaden una textura ligera y un sabor dulce.",
+                "image": "https:\/\/kartti.com\/uploads\/productos\/696bbb906f665_1768668048.webp",
+                "status": "activo"
+            },
+            {
+                "name": "Masmelos de chocolate",
+                "price": "$0",
+                "description": "Malvaviscos rellenos de chocolate, suaves por dentro y crujientes por fuera.",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "SALSAS": {
+        "status": "activo",
+        "products": [
+            {
+                "name": "Fresa",
+                "price": "$0",
+                "description": "Salsa dulce y afrutada hecha con fresas frescas, perfecta para los amantes de los sabores naturales.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Chocolate",
+                "price": "$0",
+                "description": "Salsa de chocolate rica y suave, ideal para los que disfrutan de un sabor profundo y decadente.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Arequipe",
+                "price": "$0",
+                "description": "Salsa dulce y cremosa de arequipe, el dulce de leche de la tradición colombiana.",
+                "image": "",
+                "status": "activo"
+            },
+            {
+                "name": "Leche condensada",
+                "price": "$0",
+                "description": "Salsa de leche condensada, dulce y cremosa, para darle ese toque extra de suavidad y dulzura.",
+                "image": "",
+                "status": "activo"
+            }
+        ]
+    },
+    "_settings": {
+        "call_waiter_enabled": false,
+        "colors": {
+            "background": "#1A0B12",
+            "card_background": "#2B1320",
+            "primary": "#F472B8",
+            "primary_dark": "#F472B8",
+            "primary_light": "#FFFFFF",
+            "text_primary": "#F472B8",
+            "text_secondary": "#F472B8",
+            "header_bg": "#2B1320",
+            "header_text": "#F172B7"
+        },
+        "whatsapp": "304"
+    }
+}

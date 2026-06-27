@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /kartti/
+RewriteBase /
 
 # Enrutamiento especial: delegar las solicitudes a /carta/* al front controller
 # para habilitar el tracking y servir correctamente `carta/menu.html`
@@ -10,7 +10,7 @@ RewriteRule ^carta/(.*)$ index.php?route=carta/$1 [QSA,L]
 
 # Si la petición corresponde a un fichero o directorio existente, servirlo directamente
 # EXCEPTO para archivos de carta/ que deben pasar por index.php
-RewriteCond %{REQUEST_URI} !^/kartti/carta
+RewriteCond %{REQUEST_URI} !^/kartti.com
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
@@ -30,3 +30,10 @@ RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
 Header set X-Content-Type-Options "nosniff"
 Header set X-XSS-Protection "1; mode=block"
 Header set X-Frame-Options "SAMEORIGIN"
+
+
+# Carta: no guardar en caché (página, JS, CSS, datos)
+SetEnvIf Request_URI "^/carta" NO_CACHE
+Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0" env=NO_CACHE
+Header set Pragma "no-cache" env=NO_CACHE
+Header set Expires "0" env=NO_CACHE

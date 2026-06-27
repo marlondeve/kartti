@@ -338,19 +338,30 @@ function generateCardsForCategory(category) {
         const mainPaddingTop = mainContainer ? parseFloat(getComputedStyle(mainContainer).paddingTop) : 16;
         const mainPaddingBottom = mainContainer ? parseFloat(getComputedStyle(mainContainer).paddingBottom) : 80;
         
-        // Margen de seguridad para evitar que las últimas cards se corten visualmente
-        const safetyMargin = 8;
+        // Usar la altura REAL del contenedor donde se dibuja el grid (evita desfases por flex/medidas)
+        let availableHeight = 0;
+        if (mainContainer && mainContainer.clientHeight > 0) {
+            availableHeight = mainContainer.clientHeight - mainPaddingTop - mainPaddingBottom;
+        }
+        if (availableHeight <= 0) {
+            const safetyMargin = 6;
+            const usedHeight = headerHeight + navHeight + bottomHeight + mainPaddingTop + mainPaddingBottom + safetyMargin;
+            availableHeight = Math.max(0, vh - usedHeight);
+        }
+        availableHeight = Math.max(0, availableHeight);
         
-        // Calcular altura disponible
-        const usedHeight = headerHeight + navHeight + bottomHeight + mainPaddingTop + mainPaddingBottom + safetyMargin;
-        const availableHeight = vh - usedHeight;
+        const isShortViewport = vh < 600;
+        const gapBetweenRows = isShortViewport ? 4 : 8;
+        // Altura máxima que puede tener una card para que las 3 filas + 2 gaps quepan sin cortarse
+        const maxHeightThatFits = availableHeight > 0 ? (availableHeight - 2 * gapBetweenRows) / 3 : 0;
+        let cardHeight = (availableHeight / 3) - (gapBetweenRows * 2 / 3);
+        const minCardHeight = isShortViewport ? 72 : 120;
+        const maxCardHeight = isShortViewport ? 140 : 400;
+        cardHeight = Math.max(minCardHeight, Math.min(maxCardHeight, cardHeight + (isShortViewport ? 0 : 20)));
+        // Nunca superar lo que realmente cabe en el contenedor para que las dos últimas cards no se corten
+        cardHeight = Math.min(cardHeight, Math.max(0, maxHeightThatFits));
         
-        // Dividir entre 3 filas (6 cards en 2 columnas = 3 filas)
-        // Gap entre filas: 8px (gap-y-2 = 0.5rem = 8px)
-        const gapBetweenRows = 8;
-        const cardHeight = (availableHeight / 3) - (gapBetweenRows * 2 / 3); // Ajustar por gaps
-        
-        return Math.max(cardHeight+20, 120); // Mínimo 120px para que se vea bien
+        return cardHeight;
     };
     
     const cardHeight = calculateCardHeight();
@@ -498,13 +509,15 @@ function generateCardsForCategory(category) {
         
         // Recalcular altura de las cards después de que el DOM esté completamente renderizado
         // Esto asegura que las cards 5 y 6 se ajusten correctamente
-        requestAnimationFrame(() => {
-            const recalculatedHeight = calculateCardHeight();
-            document.querySelectorAll('.product-card').forEach(card => {
-                card.style.height = `${recalculatedHeight}px`;
-            });
-        });
-    }, 50);
+
+        
+                const recalculatedHeight = calculateCardHeight();
+                document.querySelectorAll('.product-card').forEach(card => {
+                    card.style.height = `${recalculatedHeight}px`;
+                });
+         
+       
+    }, 100);
 
     // Ajustar tamaño de fuente para nombres largos
     setTimeout(() => {
