@@ -377,42 +377,13 @@
       </div>
 
       <!-- Tarjetas -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Plan Free -->
-        <div
-          class="bg-white dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-blue-600 transition duration-300 text-center py-10 px-4 max-w-xs rounded-xl shadow-md group"
-        >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-40 max-w-3xl mx-auto">
+        <!-- Plan Básico -->
+        <div class="bg-white dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-blue-600 transition duration-300 text-center py-10 px-4 max-w-xs rounded-xl shadow-md group">
           <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-white">Básico</h3>
-          <p class="text-sm mb-6 text-gray-600 dark:text-gray-300 group-hover:text-white">Ideal para comenzar</p>
-          <p class="text-4xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-white">0€</p>
-
-          <div
-            class="bg-gray-100 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-800 rounded-lg p-6 text-left mb-6 transition duration-300"
-          >
-            <ul class="space-y-3 text-sm mb-6 text-gray-600 dark:text-gray-300">
-              <li class="flex items-center gap-2"><span>✔️</span> 1 Mes gratis</li>
-              <li class="flex items-center gap-2"><span>✔️</span> Actualizaciones Básicas</li>
-              <li class="flex items-center gap-2"><span>✔️</span> Soporte </li>
-              <li class="flex items-center gap-2"><span>✔️</span> Estadísticas Básicas</li>
-              <li class="flex items-center gap-2"><span>✔️</span> Personalización Limitada</li>
-            </ul>
-                <button
-          onclick="window.open('https://wa.me/573174202747?text=Hola,%20quiero%20información%20sobre%20Kartti%201', '_blank')"
-          class="w-full bg-white dark:bg-gray-800 group-hover:bg-gray-100 dark:group-hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-semibold px-4 py-2 rounded-md transition"
-        >
-        Comenzar gratis
-        </button>
-
-          </div>
-        </div>
-
-        <!-- Plan Pro -->
-        <div class="bg-blue-500 dark:bg-blue-600 text-white transition duration-300 text-center py-10 px-4 max-w-xs rounded-xl shadow-md group">
-          <h3 class="text-2xl font-bold mb-2 ">Pro</h3>
-          <p class="text-sm mb-6 ">Para restaurantes en crecimiento</p>
-          <p id="pricePro" class="text-4xl font-bold mb-2 ">50€</p>
-          <p id="savePro" class="hidden text-xs bg-blue-400 dark:bg-blue-500 text-white inline-block px-2 py-1 rounded mb-4 font-semibold group-hover:bg-gray-100 dark:group-hover:bg-gray-700 group-hover:text-blue-600 dark:group-hover:text-blue-400">Ahorra 120.000€ al año</p>
-          <div class="bg-white dark:bg-gray-800 group-hover:bg-gray-100 dark:group-hover:bg-gray-700 rounded-lg p-6 text-left mb-6 transition duration-300">
+          <p class="text-sm mb-6 text-gray-600 dark:text-gray-300 group-hover:text-white">Para restaurantes en crecimiento</p>
+          <p id="pricePro" class="text-4xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-white">20€</p>
+          <div class="bg-gray-100 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-800 rounded-lg p-6 text-left mb-6 transition duration-300">
             <ul class="space-y-3 text-sm mb-6">
 
               <li class="flex items-center gap-2 dark:text-white text-black">
@@ -424,11 +395,12 @@
               <li class="flex items-center gap-2 dark:text-white text-black">
                 <span class="group-hover:text-pink-500 text-pink-500">✔️</span> Estadísticas Avanzadas
               </li>
+              <li class="flex items-center gap-2"><span>✔️</span> 1 Mes gratis</li>
 
             </ul>
                 <button
           onclick="window.open('https://wa.me/573174202747?text=Hola,%20quiero%20información%20sobre%20Kartti%202', '_blank')"
-          class="w-full bg-white dark:bg-blue-800 group-hover:bg-gray-100 dark:group-hover:bg-blue-700 text-white-600 dark:text-white-400 font-semibold px-4 py-2 rounded-md transition"
+          class="w-full bg-white dark:bg-blue-800 group-hover:bg-blue-600 text-blue-600 dark:text-white group-hover:text-white font-semibold px-4 py-2 rounded-md transition"
         >
          Comenzar ahora
         </button>
@@ -449,17 +421,15 @@
             class="bg-gray-100 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-800 rounded-lg p-6 text-left mb-6 transition duration-300"
           >
             <ul class="space-y-3 text-sm mb-6 text-gray-600 dark:text-gray-300">
-              <li class="flex items-center gap-2"><span>✔️</span> Menús Ilimitados</li>
-              <li class="flex items-center gap-2"><span>✔️</span> Gerente de Cuenta Dedicado</li>
-                            <li class="flex items-center gap-2 dark:text-white text-black ">
-                <span class="group-hover:text-pink-500 text-pink-500">✔️</span> Personalización Total
-              </li>
-              <li class="flex items-center gap-2"><span>✔️</span> Capacitación Incluida</li>
+              <li class="flex items-center gap-2 dark:text-white text-black"><span>✔️</span> Menús Ilimitados</li>
+              <li class="flex items-center gap-2 dark:text-white text-black"><span>✔️</span> Gerente de Cuenta Dedicado</li>
+              <li class="flex items-center gap-2 dark:text-white text-black"><span>✔️</span> Personalización Total</li>
+              <li class="flex items-center gap-2 dark:text-white text-black"><span>✔️</span> Capacitación Incluida</li>
             </ul>
 
         <button
           onclick="window.open('https://wa.me/573174202747?text=Hola,%20quiero%20información%20sobre%20Kartti%203', '_blank')"
-          class="w-full bg-white dark:bg-gray-800 group-hover:bg-gray-100 dark:group-hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-semibold px-4 py-2 rounded-md transition"
+          class="w-full bg-white dark:bg-blue-800 group-hover:bg-blue-600 text-blue-600 dark:text-white group-hover:text-white font-semibold px-4 py-2 rounded-md transition"
         >
           Contactar ventas
         </button>
@@ -533,7 +503,7 @@
         if(!btnMonthly || !btnAnnual || !pricePro) return;
 
         function setMonthly(){
-          pricePro.textContent = '40€';
+          pricePro.textContent = '200€';
           if (savePro) savePro.classList.remove('hidden');
           btnAnnual.classList.add('bg-white','dark:bg-gray-700','text-gray-800','dark:text-white');
           btnAnnual.classList.remove('text-white','bg-blue-600','dark:bg-blue-500');
@@ -542,7 +512,7 @@
         }
 
         function setAnnual(){
-          pricePro.textContent = '50€';
+          pricePro.textContent = '20€';
           if (savePro) savePro.classList.add('hidden');
           btnMonthly.classList.add('bg-white','dark:bg-gray-700','text-gray-800','dark:text-white');
           btnMonthly.classList.remove('text-white','bg-blue-600','dark:bg-blue-500');
