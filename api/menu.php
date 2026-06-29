@@ -60,7 +60,7 @@ try {
         $menuData[$category['nombre']] = array_map(function($product) {
             return [
                 'name' => $product['nombre'],
-                'price' => "$" . number_format($product['precio'], 0, ',', '.'),
+                'price' => "€" . number_format($product['precio'], 0, ',', '.'),
                 'image' => $product['imagen'] ?: 'https://via.placeholder.com/300x200',
                 'description' => $product['descripcion'] ?: ''
             ];

@@ -1081,7 +1081,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${producto.nombre}</h3>
                     ${descriptionHtml}
                     <div class="flex items-center mt-2">
-                        <p class="text-lg font-bold text-blue-600 dark:text-blue-400">$${parseInt(producto.precio).toLocaleString('es-ES')}</p>
+                        <p class="text-lg font-bold text-blue-600 dark:text-blue-400">${parseInt(producto.precio).toLocaleString('es-ES')}€</p>
                     </div>
                 </div>
             </div>

@@ -183,7 +183,7 @@ $user_email = $_SESSION['user_email'];
                         <label for="productPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio</label>
                         <div class="flex">
                             <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-                                $
+                                €
                             </span>
                             <input type="number" id="productPrice" name="precio" min="0" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none rounded-e-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="0" required>
                         </div>
@@ -286,7 +286,7 @@ $user_email = $_SESSION['user_email'];
                         <label for="editProductPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio</label>
                         <div class="flex">
                             <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-                                $
+                                €
                             </span>
                             <input type="number" id="editProductPrice" name="precio" min="0" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none rounded-e-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                         </div>

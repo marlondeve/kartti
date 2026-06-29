@@ -65,7 +65,7 @@
                 <div class="p-4">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-lg font-semibold">Sopa del Día</h3>
-                        <span class="text-blue-600 font-bold">$8.99</span>
+                        <span class="text-blue-600 font-bold">8.99€</span>
                     </div>
                     <p class="text-gray-600 text-sm mb-4">Sopa casera preparada diariamente</p>
                     <div class="flex items-center text-sm text-gray-500">
@@ -81,7 +81,7 @@
                 <div class="p-4">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-lg font-semibold">Filete de Res</h3>
-                        <span class="text-blue-600 font-bold">$24.99</span>
+                        <span class="text-blue-600 font-bold">24.99€</span>
                     </div>
                     <p class="text-gray-600 text-sm mb-4">Filete de res a la parrilla con vegetales</p>
                     <div class="flex items-center text-sm text-gray-500">
@@ -97,7 +97,7 @@
                 <div class="p-4">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-lg font-semibold">Tiramisú</h3>
-                        <span class="text-blue-600 font-bold">$8.99</span>
+                        <span class="text-blue-600 font-bold">8.99€</span>
                     </div>
                     <p class="text-gray-600 text-sm mb-4">Postre italiano clásico</p>
                     <div class="flex items-center text-sm text-gray-500">

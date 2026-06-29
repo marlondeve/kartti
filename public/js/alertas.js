@@ -504,3 +504,4 @@ function setupModalEventListeners() {
 window.addEventListener('beforeunload', function() {
     stopAutoRefresh();
 });
+});

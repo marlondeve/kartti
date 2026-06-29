@@ -776,7 +776,7 @@ if ($restId) {
         const price = document.createElement('div');
         price.className = 'text-xs font-bold mt-1';
         price.style.color = preset.colors.primary;
-        price.textContent = '$25,000';
+        price.textContent = '25,000€';
         
         cardPreview.appendChild(title);
         cardPreview.appendChild(price);

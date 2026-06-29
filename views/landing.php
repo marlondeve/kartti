@@ -384,7 +384,7 @@
         >
           <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-white">Básico</h3>
           <p class="text-sm mb-6 text-gray-600 dark:text-gray-300 group-hover:text-white">Ideal para comenzar</p>
-          <p class="text-4xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-white">$0</p>
+          <p class="text-4xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-white">0€</p>
 
           <div
             class="bg-gray-100 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-800 rounded-lg p-6 text-left mb-6 transition duration-300"
@@ -410,8 +410,8 @@
         <div class="bg-blue-500 dark:bg-blue-600 text-white transition duration-300 text-center py-10 px-4 max-w-xs rounded-xl shadow-md group">
           <h3 class="text-2xl font-bold mb-2 ">Pro</h3>
           <p class="text-sm mb-6 ">Para restaurantes en crecimiento</p>
-          <p id="pricePro" class="text-4xl font-bold mb-2 ">$50k</p>
-          <p id="savePro" class="hidden text-xs bg-blue-400 dark:bg-blue-500 text-white inline-block px-2 py-1 rounded mb-4 font-semibold group-hover:bg-gray-100 dark:group-hover:bg-gray-700 group-hover:text-blue-600 dark:group-hover:text-blue-400">Ahorra $120.000 al año</p>
+          <p id="pricePro" class="text-4xl font-bold mb-2 ">50€</p>
+          <p id="savePro" class="hidden text-xs bg-blue-400 dark:bg-blue-500 text-white inline-block px-2 py-1 rounded mb-4 font-semibold group-hover:bg-gray-100 dark:group-hover:bg-gray-700 group-hover:text-blue-600 dark:group-hover:text-blue-400">Ahorra 120.000€ al año</p>
           <div class="bg-white dark:bg-gray-800 group-hover:bg-gray-100 dark:group-hover:bg-gray-700 rounded-lg p-6 text-left mb-6 transition duration-300">
             <ul class="space-y-3 text-sm mb-6">
 
@@ -533,7 +533,7 @@
         if(!btnMonthly || !btnAnnual || !pricePro) return;
 
         function setMonthly(){
-          pricePro.textContent = '$40k';
+          pricePro.textContent = '40€';
           if (savePro) savePro.classList.remove('hidden');
           btnAnnual.classList.add('bg-white','dark:bg-gray-700','text-gray-800','dark:text-white');
           btnAnnual.classList.remove('text-white','bg-blue-600','dark:bg-blue-500');
@@ -542,7 +542,7 @@
         }
 
         function setAnnual(){
-          pricePro.textContent = '$50k';
+          pricePro.textContent = '50€';
           if (savePro) savePro.classList.add('hidden');
           btnMonthly.classList.add('bg-white','dark:bg-gray-700','text-gray-800','dark:text-white');
           btnMonthly.classList.remove('text-white','bg-blue-600','dark:bg-blue-500');

@@ -43,7 +43,7 @@ function actualizarJsonMenu($restaurante_id) {
             $productosFormateados = array_map(function($producto) {
                 return [
                     "name" => $producto['nombre'] ?? '',
-                    "price" => '$' . number_format((float)($producto['precio'] ?? 0), 0),
+                    "price" => '€' . number_format((float)($producto['precio'] ?? 0), 0),
                     "description" => $producto['descripcion'] ?? '',
                     "image" => $producto['imagen'] ? 'https://kartti.com/' . $producto['imagen'] : '',
                     "status" => $producto['estado'] ?? 'activo'
